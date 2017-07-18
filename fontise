@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const cp = require('child_process');
+
+const setup = [
+  { height: 57, os: 0, blockWidth: 8, chars: "1234567890-:.udgsbap" },
+  { height: 43, os: 60, blockWidth: 6, chars: "1234567890-:.udgsbap" },
+  { height: 28, os: 110, blockWidth: 4, chars: "1234567890-:.udgsbap" },
+  { height: 22, os: 140, blockWidth: 3, chars: "1234567890-:.udgsbap" },
+  { height: 14, os: 170, blockWidth: 2, chars: "1234567890-:.udgsbap" },
+  { height: 8, os: 190, blockWidth: 1.5, chars: "1234567890-:." },
+  { height: 7, os: 200, blockWidth: 1, chars: "1234567890-:." },
+];
+
+const refWidth = {
+  5: '1234567890gsa',
+  3: '-',
+  2: ':.',
+  7: 'ud',
+  6: 'p',
+  4: 'b'
+};
+
+const charRef = {};
+Object.keys(refWidth).forEach(m => refWidth[m].split('').forEach(l => charRef[l] = m));
+
+
+const root = ['.', 'resources', 'font'];
+
+setup.forEach(setting => {
+  const fName = path.join.apply(path, root.concat(`hooky_${setting.blockWidth}.fnt`));
+  const out = fs.createWriteStream(fName);
+  out.write(`common lineHeight=${setting.height} base=${setting.height} pages=1
+page id=0 file="bold.png"
+chars count=${setting.chars.length+2}
+`, () => {
+    let os = 0;
+    const lines = setting.chars.split('').map(c => {
+      let l = `char id=${c.charCodeAt(0)} `;
+      l += `x=${os} y=${setting.os} `;
+      l += `width=${charRef[c]*setting.blockWidth|0} `;
+      l += `height=${setting.height} `;
+      l += `xoffset=0 yoffset=0 xadvance=${charRef[c]*setting.blockWidth|0} page=0 chnl=1`;
+      os += setting.blockWidth * charRef[c] | 0;
+      return l;
+    });
+    lines.push(`char id=32 x=700 y=100 width=${setting.blockWidth*5|0} height=${setting.height} xoffset=0 yoffset=0 xadvance=${setting.blockWidth*5|0} page=0 chnl=1`);
+    lines.push(`char id=33 x=700 y=100 width=${setting.blockWidth|0} height=${setting.height} xoffset=0 yoffset=0 xadvance=${setting.blockWidth|0} page=0 chnl=1`);
+    lines.push("");
+    out.end(lines.join("\r\n"));
+  });
+});

@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const fs = require('fs');
+const path = require('path');
+const cp = require('child_process');
+const dir = par => {
+  const stat = fs.statSync(par);
+  if (stat.isDirectory()) {
+    const files = fs.readdirSync(par);
+    let r = [].concat([], files.reduce((res, f) => res.concat(dir(path.join(par, f))), []));
+    return r;
+  } else return par;
+};
+
+const resXml = dir('.').filter(n => n.startsWith('resources/')).filter(n => n.endsWith('.xml')).join(':');
+const source = dir('source').filter(n => n.endsWith('.mc'));
+const res = cp.spawnSync('/Users/hooky/garmin/connectiq-sdk-mac-2.3.1/bin/monkeyc', ['-o', 'bin/TidyWatch.prg', '-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d', process.argv[2] + '_sim'].concat(source), {stdio: [0,1,2]});
+
+console.log("Code:", res.status);

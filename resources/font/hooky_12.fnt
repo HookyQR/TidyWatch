@@ -1,0 +1,18 @@
+common lineHeight=84 base=84 pages=1
+page id=0 file="bold.png"
+chars count=15
+char id=49 x=0 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=50 x=60 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=51 x=120 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=52 x=180 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=53 x=240 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=54 x=300 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=55 x=360 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=56 x=420 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=57 x=480 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=48 x=540 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=45 x=600 y=0 width=36 height=84 xoffset=0 yoffset=0 xadvance=36 page=0 chnl=1
+char id=58 x=636 y=0 width=24 height=84 xoffset=0 yoffset=0 xadvance=24 page=0 chnl=1
+char id=46 x=660 y=0 width=24 height=84 xoffset=0 yoffset=0 xadvance=24 page=0 chnl=1
+char id=32 x=700 y=0 width=60 height=84 xoffset=0 yoffset=0 xadvance=60 page=0 chnl=1
+char id=33 x=700 y=0 width=12 height=84 xoffset=0 yoffset=0 xadvance=12 page=0 chnl=1

@@ -1,0 +1,15 @@
+vívoactive HR	      148 x 205	40 x 33	64	  enter, back, menu	                tall	      Yes
+
+epix®	              205 x 148	40 x 40	64	  up, down, enter, back, menu	      rectangle	  Yes
+Forerunner® 920XT	  205 x 148	65 x 65	16	  up, down, enter, back, menu	      rectangle	  No
+vívoactive	        205 x 148	61 x 43	64	  enter, back, menu	                rectangle	  Yes
+
+Forerunner® 230     215 x 180	40 x 40	16	  up, down, enter, back, menu	      semi-round	No
+Forerunner® 630     215 x 180	40 x 40	16	  lap, enter, back, menu	          semi-round	Yes
+
+fēnix™ Chronos	    218 x 218	40 x 40	64	  up, down, enter, back, menu	      round	      No
+fēnix™ 3, fēnix™ 3  218 x 218	40 x 40	16	  up, down, enter, back, menu	      round	      No
+fēnix™ 5S	          218 x 218	36 x 36	64	  up, down, enter, back, menu	      round	      No
+
+Approach®S60	      240 x 240	40 x 33	64	  enter, back, menu	                round	      Yes
+fēnix™ 5, fēnix™ 5X	240 x 240	40 x 40	64	  up, down, enter, back, menu	      round	      No

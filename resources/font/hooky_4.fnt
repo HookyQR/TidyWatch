@@ -1,0 +1,25 @@
+common lineHeight=28 base=28 pages=1
+page id=0 file="bold.png"
+chars count=22
+char id=49 x=0 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=50 x=20 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=51 x=40 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=52 x=60 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=53 x=80 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=54 x=100 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=55 x=120 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=56 x=140 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=57 x=160 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=48 x=180 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=45 x=200 y=110 width=12 height=28 xoffset=0 yoffset=0 xadvance=12 page=0 chnl=1
+char id=58 x=212 y=110 width=8 height=28 xoffset=0 yoffset=0 xadvance=8 page=0 chnl=1
+char id=46 x=220 y=110 width=8 height=28 xoffset=0 yoffset=0 xadvance=8 page=0 chnl=1
+char id=117 x=228 y=110 width=28 height=28 xoffset=0 yoffset=0 xadvance=28 page=0 chnl=1
+char id=100 x=256 y=110 width=28 height=28 xoffset=0 yoffset=0 xadvance=28 page=0 chnl=1
+char id=103 x=284 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=115 x=304 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=98 x=324 y=110 width=16 height=28 xoffset=0 yoffset=0 xadvance=16 page=0 chnl=1
+char id=97 x=340 y=110 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=112 x=360 y=110 width=24 height=28 xoffset=0 yoffset=0 xadvance=24 page=0 chnl=1
+char id=32 x=700 y=100 width=20 height=28 xoffset=0 yoffset=0 xadvance=20 page=0 chnl=1
+char id=33 x=700 y=100 width=4 height=28 xoffset=0 yoffset=0 xadvance=4 page=0 chnl=1

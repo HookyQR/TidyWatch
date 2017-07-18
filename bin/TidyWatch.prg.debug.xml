@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+<pcToLineNum>
+<entry filename="source/FixedLengthText.mc" lineNum="11" pc="268435456" symbol="previous"/>
+<entry filename="source/FixedLengthText.mc" lineNum="12" pc="268435460" symbol="previous"/>
+<entry filename="source/FixedLengthText.mc" lineNum="15" pc="268435470" symbol="initialize"/>
+<entry filename="source/FixedLengthText.mc" lineNum="16" pc="268435474" symbol="initialize"/>
+<entry filename="source/FixedLengthText.mc" lineNum="17" pc="268435484" symbol="initialize"/>
+<entry filename="source/FixedLengthText.mc" lineNum="18" pc="268435494" symbol="initialize"/>
+<entry filename="source/FixedLengthText.mc" lineNum="19" pc="268435517" symbol="initialize"/>
+<entry filename="source/FixedLengthText.mc" lineNum="22" pc="268435528" symbol="centerY"/>
+<entry filename="source/FixedLengthText.mc" lineNum="23" pc="268435532" symbol="centerY"/>
+<entry filename="source/FixedLengthText.mc" lineNum="26" pc="268435564" symbol="setLeft"/>
+<entry filename="source/FixedLengthText.mc" lineNum="27" pc="268435568" symbol="setLeft"/>
+<entry filename="source/FixedLengthText.mc" lineNum="28" pc="268435578" symbol="setLeft"/>
+<entry filename="source/FixedLengthText.mc" lineNum="31" pc="268435582" symbol="setTop"/>
+<entry filename="source/FixedLengthText.mc" lineNum="32" pc="268435586" symbol="setTop"/>
+<entry filename="source/FixedLengthText.mc" lineNum="33" pc="268435596" symbol="setTop"/>
+<entry filename="source/FixedLengthText.mc" lineNum="36" pc="268435600" symbol="left"/>
+<entry filename="source/FixedLengthText.mc" lineNum="37" pc="268435604" symbol="left"/>
+<entry filename="source/FixedLengthText.mc" lineNum="38" pc="268435611" symbol="left"/>
+<entry filename="source/FixedLengthText.mc" lineNum="39" pc="268435624" symbol="left"/>
+<entry filename="source/FixedLengthText.mc" lineNum="41" pc="268435650" symbol="left"/>
+<entry filename="source/FixedLengthText.mc" lineNum="43" pc="268435681" symbol="left"/>
+<entry filename="source/FixedLengthText.mc" lineNum="46" pc="268435685" symbol="right"/>
+<entry filename="source/FixedLengthText.mc" lineNum="47" pc="268435689" symbol="right"/>
+<entry filename="source/FixedLengthText.mc" lineNum="50" pc="268435717" symbol="top"/>
+<entry filename="source/FixedLengthText.mc" lineNum="51" pc="268435721" symbol="top"/>
+<entry filename="source/FixedLengthText.mc" lineNum="52" pc="268435728" symbol="top"/>
+<entry filename="source/FixedLengthText.mc" lineNum="53" pc="268435741" symbol="top"/>
+<entry filename="source/FixedLengthText.mc" lineNum="55" pc="268435767" symbol="top"/>
+<entry filename="source/FixedLengthText.mc" lineNum="57" pc="268435789" symbol="top"/>
+<entry filename="source/FixedLengthText.mc" lineNum="60" pc="268435793" symbol="bottom"/>
+<entry filename="source/FixedLengthText.mc" lineNum="61" pc="268435797" symbol="bottom"/>
+<entry filename="source/FixedLengthText.mc" lineNum="64" pc="268435825" symbol="width"/>
+<entry filename="source/FixedLengthText.mc" lineNum="65" pc="268435829" symbol="width"/>
+<entry filename="source/FixedLengthText.mc" lineNum="68" pc="268435845" symbol="height"/>
+<entry filename="source/FixedLengthText.mc" lineNum="69" pc="268435849" symbol="height"/>
+<entry filename="source/FixedLengthText.mc" lineNum="72" pc="268435865" symbol="write"/>
+<entry filename="source/FixedLengthText.mc" lineNum="73" pc="268435869" symbol="write"/>
+<entry filename="source/Heart.mc" lineNum="15" pc="268435926" symbol="initialize"/>
+<entry filename="source/Heart.mc" lineNum="16" pc="268435930" symbol="initialize"/>
+<entry filename="source/Heart.mc" lineNum="19" pc="268435941" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="20" pc="268435945" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="21" pc="268435962" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="22" pc="268435962" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="24" pc="268435972" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="25" pc="268436046" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="26" pc="268436161" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="29" pc="268436196" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="30" pc="268436270" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="33" pc="268436305" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="34" pc="268436318" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="35" pc="268436323" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="36" pc="268436349" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="38" pc="268436408" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="39" pc="268436434" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="42" pc="268436496" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="43" pc="268436501" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="44" pc="268436525" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="45" pc="268436538" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="47" pc="268436544" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="48" pc="268436627" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="50" pc="268436638" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="51" pc="268436683" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="52" pc="268436775" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="53" pc="268436788" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="56" pc="268436797" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="57" pc="268436807" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="58" pc="268436837" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="59" pc="268436860" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="60" pc="268436892" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="61" pc="268436942" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="62" pc="268436994" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="66" pc="268437013" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="67" pc="268437043" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="68" pc="268437066" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="69" pc="268437098" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="70" pc="268437148" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="71" pc="268437200" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="74" pc="268437219" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="75" pc="268437235" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="77" pc="268437251" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="78" pc="268437261" symbol="updateFrom"/>
+<entry filename="source/Heart.mc" lineNum="79" pc="268437289" symbol="updateFrom"/>
+<entry filename="source/InfoTextCell.mc" lineNum="9" pc="268437318" symbol="initialize"/>
+<entry filename="source/InfoTextCell.mc" lineNum="10" pc="268437322" symbol="initialize"/>
+<entry filename="source/InfoTextCell.mc" lineNum="11" pc="268437366" symbol="initialize"/>
+<entry filename="source/InfoTextCell.mc" lineNum="13" pc="268437410" symbol="initialize"/>
+<entry filename="source/InfoTextCell.mc" lineNum="16" pc="268437446" symbol="updateAndDraw"/>
+<entry filename="source/InfoTextCell.mc" lineNum="19" pc="268437451" symbol="centerY"/>
+<entry filename="source/InfoTextCell.mc" lineNum="20" pc="268437455" symbol="centerY"/>
+<entry filename="source/InfoTextCell.mc" lineNum="23" pc="268437487" symbol="setLeft"/>
+<entry filename="source/InfoTextCell.mc" lineNum="24" pc="268437491" symbol="setLeft"/>
+<entry filename="source/InfoTextCell.mc" lineNum="25" pc="268437501" symbol="setLeft"/>
+<entry filename="source/InfoTextCell.mc" lineNum="28" pc="268437505" symbol="setTop"/>
+<entry filename="source/InfoTextCell.mc" lineNum="29" pc="268437509" symbol="setTop"/>
+<entry filename="source/InfoTextCell.mc" lineNum="30" pc="268437519" symbol="setTop"/>
+<entry filename="source/InfoTextCell.mc" lineNum="33" pc="268437523" symbol="left"/>
+<entry filename="source/InfoTextCell.mc" lineNum="34" pc="268437527" symbol="left"/>
+<entry filename="source/InfoTextCell.mc" lineNum="35" pc="268437534" symbol="left"/>
+<entry filename="source/InfoTextCell.mc" lineNum="36" pc="268437547" symbol="left"/>
+<entry filename="source/InfoTextCell.mc" lineNum="38" pc="268437573" symbol="left"/>
+<entry filename="source/InfoTextCell.mc" lineNum="40" pc="268437595" symbol="left"/>
+<entry filename="source/InfoTextCell.mc" lineNum="43" pc="268437599" symbol="right"/>
+<entry filename="source/InfoTextCell.mc" lineNum="44" pc="268437603" symbol="right"/>
+<entry filename="source/InfoTextCell.mc" lineNum="47" pc="268437631" symbol="top"/>
+<entry filename="source/InfoTextCell.mc" lineNum="48" pc="268437635" symbol="top"/>
+<entry filename="source/InfoTextCell.mc" lineNum="49" pc="268437642" symbol="top"/>
+<entry filename="source/InfoTextCell.mc" lineNum="50" pc="268437655" symbol="top"/>
+<entry filename="source/InfoTextCell.mc" lineNum="52" pc="268437681" symbol="top"/>
+<entry filename="source/InfoTextCell.mc" lineNum="54" pc="268437703" symbol="top"/>
+<entry filename="source/InfoTextCell.mc" lineNum="57" pc="268437707" symbol="bottom"/>
+<entry filename="source/InfoTextCell.mc" lineNum="58" pc="268437711" symbol="bottom"/>
+<entry filename="source/InfoTextCell.mc" lineNum="61" pc="268437739" symbol="width"/>
+<entry filename="source/InfoTextCell.mc" lineNum="62" pc="268437743" symbol="width"/>
+<entry filename="source/InfoTextCell.mc" lineNum="65" pc="268437759" symbol="height"/>
+<entry filename="source/InfoTextCell.mc" lineNum="66" pc="268437763" symbol="height"/>
+<entry filename="source/InfoTextCell.mc" lineNum="69" pc="268437779" symbol="write"/>
+<entry filename="source/InfoTextCell.mc" lineNum="70" pc="268437783" symbol="write"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="7" pc="268437840" symbol="initialize"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="8" pc="268437844" symbol="initialize"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="12" pc="268437863" symbol="onStart"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="16" pc="268437868" symbol="onStop"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="20" pc="268437873" symbol="getInitialView"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="21" pc="268437877" symbol="getInitialView"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="25" pc="268437945" symbol="onSettingsChanged"/>
+<entry filename="source/TidyWatchApp.mc" lineNum="26" pc="268437949" symbol="onSettingsChanged"/>
+<entry filename="source/TidyWatchView.mc" lineNum="26" pc="268437966" symbol="initialize"/>
+<entry filename="source/TidyWatchView.mc" lineNum="27" pc="268437970" symbol="initialize"/>
+<entry filename="source/TidyWatchView.mc" lineNum="30" pc="268437989" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="31" pc="268437993" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="32" pc="268438036" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="33" pc="268438079" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="34" pc="268438122" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="36" pc="268438165" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="37" pc="268438216" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="39" pc="268438274" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="40" pc="268438285" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="43" pc="268438346" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="44" pc="268438363" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="45" pc="268438373" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="47" pc="268438383" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="49" pc="268438424" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="50" pc="268438453" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="51" pc="268438473" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="52" pc="268438524" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="53" pc="268438582" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="54" pc="268438640" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="55" pc="268438681" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="57" pc="268438734" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="59" pc="268438811" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="60" pc="268438862" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="61" pc="268438920" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="62" pc="268438961" symbol="onLayout"/>
+<entry filename="source/TidyWatchView.mc" lineNum="65" pc="268439039" symbol="onShow"/>
+<entry filename="source/TidyWatchView.mc" lineNum="67" pc="268439044" symbol="location"/>
+<entry filename="source/TidyWatchView.mc" lineNum="68" pc="268439048" symbol="location"/>
+<entry filename="source/TidyWatchView.mc" lineNum="69" pc="268439065" symbol="location"/>
+<entry filename="source/TidyWatchView.mc" lineNum="72" pc="268439084" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="73" pc="268439088" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="74" pc="268439105" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="76" pc="268439122" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="77" pc="268439132" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="78" pc="268439156" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="80" pc="268439180" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="81" pc="268439192" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="82" pc="268439203" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="84" pc="268439216" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="86" pc="268439237" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="88" pc="268439255" symbol="clockParts"/>
+<entry filename="source/TidyWatchView.mc" lineNum="91" pc="268439293" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="92" pc="268439297" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="93" pc="268439310" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="94" pc="268439346" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="95" pc="268439402" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="96" pc="268439414" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="97" pc="268439430" symbol="onUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="100" pc="268439441" symbol="positionByPartial"/>
+<entry filename="source/TidyWatchView.mc" lineNum="101" pc="268439445" symbol="positionByPartial"/>
+<entry filename="source/TidyWatchView.mc" lineNum="102" pc="268439456" symbol="positionByPartial"/>
+<entry filename="source/TidyWatchView.mc" lineNum="104" pc="268439462" symbol="positionByPartial"/>
+<entry filename="source/TidyWatchView.mc" lineNum="105" pc="268439485" symbol="positionByPartial"/>
+<entry filename="source/TidyWatchView.mc" lineNum="108" pc="268439498" symbol="floorOffset"/>
+<entry filename="source/TidyWatchView.mc" lineNum="109" pc="268439502" symbol="floorOffset"/>
+<entry filename="source/TidyWatchView.mc" lineNum="110" pc="268439547" symbol="floorOffset"/>
+<entry filename="source/TidyWatchView.mc" lineNum="113" pc="268439562" symbol="onPartialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="114" pc="268439566" symbol="onPartialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="117" pc="268439583" symbol="clearBox"/>
+<entry filename="source/TidyWatchView.mc" lineNum="118" pc="268439587" symbol="clearBox"/>
+<entry filename="source/TidyWatchView.mc" lineNum="119" pc="268439598" symbol="clearBox"/>
+<entry filename="source/TidyWatchView.mc" lineNum="121" pc="268439663" symbol="clearBox"/>
+<entry filename="source/TidyWatchView.mc" lineNum="122" pc="268439679" symbol="clearBox"/>
+<entry filename="source/TidyWatchView.mc" lineNum="125" pc="268439742" symbol="drawString"/>
+<entry filename="source/TidyWatchView.mc" lineNum="126" pc="268439746" symbol="drawString"/>
+<entry filename="source/TidyWatchView.mc" lineNum="127" pc="268439782" symbol="drawString"/>
+<entry filename="source/TidyWatchView.mc" lineNum="130" pc="268439799" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="131" pc="268439803" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="132" pc="268439831" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="133" pc="268439836" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="134" pc="268439905" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="135" pc="268439941" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="137" pc="268440000" symbol="displayHour"/>
+<entry filename="source/TidyWatchView.mc" lineNum="140" pc="268440019" symbol="displayMin"/>
+<entry filename="source/TidyWatchView.mc" lineNum="141" pc="268440023" symbol="displayMin"/>
+<entry filename="source/TidyWatchView.mc" lineNum="142" pc="268440051" symbol="displayMin"/>
+<entry filename="source/TidyWatchView.mc" lineNum="143" pc="268440102" symbol="displayMin"/>
+<entry filename="source/TidyWatchView.mc" lineNum="144" pc="268440138" symbol="displayMin"/>
+<entry filename="source/TidyWatchView.mc" lineNum="145" pc="268440194" symbol="displayMin"/>
+<entry filename="source/TidyWatchView.mc" lineNum="148" pc="268440213" symbol="displaySec"/>
+<entry filename="source/TidyWatchView.mc" lineNum="149" pc="268440217" symbol="displaySec"/>
+<entry filename="source/TidyWatchView.mc" lineNum="150" pc="268440245" symbol="displaySec"/>
+<entry filename="source/TidyWatchView.mc" lineNum="151" pc="268440301" symbol="displaySec"/>
+<entry filename="source/TidyWatchView.mc" lineNum="152" pc="268440329" symbol="displaySec"/>
+<entry filename="source/TidyWatchView.mc" lineNum="155" pc="268440348" symbol="displayMaxHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="156" pc="268440352" symbol="displayMaxHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="157" pc="268440380" symbol="displayMaxHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="160" pc="268440399" symbol="displayMinHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="161" pc="268440403" symbol="displayMinHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="162" pc="268440431" symbol="displayMinHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="165" pc="268440450" symbol="displayActualHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="166" pc="268440454" symbol="displayActualHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="167" pc="268440482" symbol="displayActualHr"/>
+<entry filename="source/TidyWatchView.mc" lineNum="169" pc="268440501" symbol="displayStepActual"/>
+<entry filename="source/TidyWatchView.mc" lineNum="170" pc="268440505" symbol="displayStepActual"/>
+<entry filename="source/TidyWatchView.mc" lineNum="171" pc="268440533" symbol="displayStepActual"/>
+<entry filename="source/TidyWatchView.mc" lineNum="173" pc="268440552" symbol="displayStepGoal"/>
+<entry filename="source/TidyWatchView.mc" lineNum="174" pc="268440556" symbol="displayStepGoal"/>
+<entry filename="source/TidyWatchView.mc" lineNum="175" pc="268440584" symbol="displayStepGoal"/>
+<entry filename="source/TidyWatchView.mc" lineNum="178" pc="268440603" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="179" pc="268440607" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="180" pc="268440620" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="181" pc="268440624" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="182" pc="268440645" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="183" pc="268440666" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="185" pc="268440687" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="186" pc="268440702" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="187" pc="268440727" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="188" pc="268440747" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="190" pc="268440747" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="191" pc="268440797" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="192" pc="268440810" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="193" pc="268440837" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="194" pc="268440860" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="195" pc="268440879" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="197" pc="268440886" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="198" pc="268440909" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="199" pc="268440928" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="201" pc="268440935" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="202" pc="268440964" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="205" pc="268440993" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="206" pc="268441054" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="211" pc="268441084" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="212" pc="268441089" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="214" pc="268441136" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="215" pc="268441141" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="217" pc="268441188" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="218" pc="268441193" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="220" pc="268441246" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="221" pc="268441280" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="222" pc="268441385" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="225" pc="268441420" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="226" pc="268441437" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="227" pc="268441518" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="228" pc="268441547" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="229" pc="268441563" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="231" pc="268441610" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="232" pc="268441639" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="233" pc="268441655" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="235" pc="268441702" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="238" pc="268441773" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="239" pc="268441783" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="239" pc="268441795" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="240" pc="268441799" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="241" pc="268441885" symbol="partialUpdate"/>
+<entry filename="source/TidyWatchView.mc" lineNum="244" pc="268441918" symbol="calculateTheThing"/>
+<entry filename="source/TidyWatchView.mc" lineNum="245" pc="268441922" symbol="calculateTheThing"/>
+<entry filename="source/TidyWatchView.mc" lineNum="245" pc="268441933" symbol="calculateTheThing"/>
+<entry filename="source/TidyWatchView.mc" lineNum="246" pc="268441942" symbol="calculateTheThing"/>
+<entry filename="source/TidyWatchView.mc" lineNum="251" pc="268441983" symbol="onHide"/>
+<entry filename="source/TidyWatchView.mc" lineNum="254" pc="268441988" symbol="onExitSleep"/>
+<entry filename="source/TidyWatchView.mc" lineNum="255" pc="268441992" symbol="onExitSleep"/>
+<entry filename="source/TidyWatchView.mc" lineNum="259" pc="268442003" symbol="onEnterSleep"/>
+<entry filename="source/TidyWatchView.mc" lineNum="265" pc="268442008" symbol="initialize"/>
+<entry filename="source/TidyWatchView.mc" lineNum="266" pc="268442012" symbol="initialize"/>
+<entry filename="source/TidyWatchView.mc" lineNum="273" pc="268442035" symbol="onPowerBudgetExceeded"/>
+<entry filename="source/TidyWatchView.mc" lineNum="274" pc="268442039" symbol="onPowerBudgetExceeded"/>
+<entry filename="source/TidyWatchView.mc" lineNum="275" pc="268442069" symbol="onPowerBudgetExceeded"/>
+</pcToLineNum>
+<symbolTable>
+<entry id="82" method="true" symbol="displayActualHr"/>
+<entry id="14" object="true" symbol="TWDelegate"/>
+<entry field="true" id="47" symbol="lastRx"/>
+<entry id="8389124" method="true" symbol="onUpdate"/>
+<entry field="true" id="15" symbol="mPrevious"/>
+<entry field="true" id="66" symbol="hrBottom"/>
+<entry id="8390097" method="true" symbol="onPartialUpdate"/>
+<entry field="true" id="50" symbol="fontSec"/>
+<entry field="true" id="46" symbol="current"/>
+<entry field="true" id="34" symbol="ColorBlue"/>
+<entry id="18" method="true" symbol="previous"/>
+<entry id="24" method="true" symbol="bottom"/>
+<entry field="true" id="8388611" module="true" symbol="Toybox"/>
+<entry id="8388645" module="true" symbol="Time"/>
+<entry id="71" method="true" symbol="location"/>
+<entry id="8388770" module="true" object="true" symbol="Strings"/>
+<entry field="true" id="60" symbol="stepActualBox"/>
+<entry field="true" id="40" symbol="ColorWhite"/>
+<entry id="8389280" method="true" symbol="getInitialView"/>
+<entry id="8389377" method="true" symbol="onExitSleep"/>
+<entry field="true" id="16" symbol="mDim"/>
+<entry id="8390098" method="true" symbol="onPowerBudgetExceeded"/>
+<entry id="8388640" module="true" symbol="Lang"/>
+<entry id="20" method="true" symbol="setTop"/>
+<entry field="true" id="8389872" symbol="floorsClimbed"/>
+<entry id="8389761" method="true" symbol="centerY"/>
+<entry field="true" id="39" symbol="ColorBlack"/>
+<entry id="8388769" module="true" object="true" symbol="Rez"/>
+<entry id="9" object="true" symbol="FixedLengthText"/>
+<entry id="8389123" method="true" symbol="onShow"/>
+<entry id="85" method="true" symbol="partialUpdate"/>
+<entry id="81" method="true" symbol="displayMinHr"/>
+<entry field="true" id="69" symbol="stepsNow"/>
+<entry field="true" id="61" symbol="lastTimeDisplayed"/>
+<entry field="true" id="35" symbol="ColorRed"/>
+<entry id="74" method="true" symbol="floorOffset"/>
+<entry field="true" id="36" symbol="ForegroundColorTitle"/>
+<entry field="true" id="62" symbol="timeWidth"/>
+<entry field="true" id="31" symbol="medium"/>
+<entry id="72" method="true" symbol="clockParts"/>
+<entry id="8388702" method="true" symbol="initialize"/>
+<entry field="true" id="41" symbol="AppName"/>
+<entry field="true" id="67" symbol="hrLast"/>
+<entry field="true" id="70" symbol="displayedSteps"/>
+<entry field="true" id="57" symbol="hrMaxBox"/>
+<entry field="true" id="68" symbol="stepsTop"/>
+<entry id="12" object="true" symbol="TidyWatchApp"/>
+<entry field="true" id="65" symbol="hrTop"/>
+<entry id="78" method="true" symbol="displayMin"/>
+<entry field="true" id="28" symbol="LauncherIcon"/>
+<entry id="13" object="true" symbol="TidyWatchView"/>
+<entry field="true" id="17" symbol="padding"/>
+<entry id="11" object="true" symbol="TextMeasure"/>
+<entry id="8389683" method="true" symbol="onSettingsChanged"/>
+<entry id="83" method="true" symbol="displayStepActual"/>
+<entry id="8389281" method="true" symbol="onStop"/>
+<entry id="90" method="true" symbol="updateAndDraw"/>
+<entry id="23" method="true" symbol="top"/>
+<entry id="8388771" module="true" object="true" symbol="Drawables"/>
+<entry id="8389122" method="true" symbol="onLayout"/>
+<entry field="true" id="38" symbol="ColorDarkGray"/>
+<entry id="86" method="true" symbol="calculateTheThing"/>
+<entry field="true" id="63" symbol="timeHeight"/>
+<entry id="8389279" method="true" symbol="onStart"/>
+<entry id="10" object="true" symbol="Heart"/>
+<entry field="true" id="59" symbol="stepTotalBox"/>
+<entry id="79" method="true" symbol="displaySec"/>
+<entry field="true" id="8389344" symbol="seconds"/>
+<entry id="8389376" method="true" symbol="onEnterSleep"/>
+<entry field="true" id="56" symbol="hrMinBox"/>
+<entry field="true" id="8389348" symbol="font"/>
+<entry id="21" method="true" symbol="left"/>
+<entry field="true" id="33" symbol="ColorLightGray"/>
+<entry id="22" method="true" symbol="right"/>
+<entry id="19" method="true" symbol="setLeft"/>
+<entry field="true" id="37" symbol="BackgroundColorTitle"/>
+<entry field="true" id="8389067" method="true" symbol="height"/>
+<entry field="true" id="54" symbol="minBox"/>
+<entry field="true" id="32" symbol="time"/>
+<entry id="8389702" method="true" symbol="getHeartRateHistory"/>
+<entry id="84" method="true" symbol="displayStepGoal"/>
+<entry field="true" id="58" symbol="hrActualBox"/>
+<entry id="8390103" method="true" symbol="setClip"/>
+<entry field="true" id="89" symbol="cols"/>
+<entry id="27" module="true" symbol="Layouts"/>
+<entry id="48" method="true" symbol="updateFrom"/>
+<entry id="80" method="true" symbol="displayMaxHr"/>
+<entry field="true" id="55" symbol="secBox"/>
+<entry field="true" id="8388721" symbol="min"/>
+<entry id="8389125" method="true" symbol="onHide"/>
+<entry field="true" id="88" symbol="fonts"/>
+<entry id="77" method="true" symbol="displayHour"/>
+<entry field="true" id="43" symbol="prevMin"/>
+<entry id="8390088" module="true" object="true" symbol="JsonData"/>
+<entry field="true" id="8389066" method="true" symbol="width"/>
+<entry id="76" method="true" symbol="drawString"/>
+<entry field="true" id="64" symbol="fromSleep"/>
+<entry field="true" id="44" symbol="max"/>
+<entry field="true" id="45" symbol="lookBack"/>
+<entry id="75" method="true" symbol="clearBox"/>
+<entry id="26" module="true" symbol="Menus"/>
+<entry field="true" id="29" symbol="xsmall"/>
+<entry field="true" id="53" symbol="hourBox"/>
+<entry field="true" id="42" symbol="prevMax"/>
+<entry field="true" id="87" symbol="dims"/>
+<entry field="true" id="49" symbol="fontTime"/>
+<entry field="true" id="8390079" symbol="y"/>
+<entry field="true" id="8390078" symbol="x"/>
+<entry id="8388772" module="true" object="true" symbol="Fonts"/>
+<entry field="true" id="51" symbol="fontSmall"/>
+<entry field="true" id="8388722" symbol="sec"/>
+<entry id="73" method="true" symbol="positionByPartial"/>
+<entry field="true" id="52" symbol="fontMed"/>
+<entry field="true" id="30" symbol="small"/>
+<entry id="25" method="true" symbol="write"/>
+</symbolTable>
+<localVars>
+<entry endPc="268435528" name="dc" stackId="1" startPc="268435470"/>
+<entry endPc="268435528" name="string" stackId="2" startPc="268435470"/>
+<entry endPc="268435528" name="previous" stackId="4" startPc="268435470"/>
+<entry endPc="268435528" name="pad" stackId="5" startPc="268435470"/>
+<entry endPc="268435528" name="aFont" stackId="3" startPc="268435470"/>
+<entry endPc="268435564" name="hSpace" stackId="1" startPc="268435528"/>
+<entry endPc="268435582" name="val" stackId="1" startPc="268435564"/>
+<entry endPc="268435600" name="val" stackId="1" startPc="268435582"/>
+<entry endPc="268435684" name="rX" stackId="1" startPc="268435604"/>
+<entry endPc="268435792" name="rY" stackId="1" startPc="268435721"/>
+<entry endPc="268435926" name="dc" stackId="1" startPc="268435865"/>
+<entry endPc="268435926" name="data" stackId="2" startPc="268435865"/>
+<entry endPc="268435941" name="duration" stackId="1" startPc="268435926"/>
+<entry endPc="268437013" name="i" stackId="5" startPc="268436837"/>
+<entry endPc="268437219" name="i" stackId="6" startPc="268437043"/>
+<entry endPc="268437317" name="hr" stackId="3" startPc="268435945"/>
+<entry endPc="268437317" name="then" stackId="2" startPc="268435945"/>
+<entry endPc="268437317" name="c" stackId="4" startPc="268435945"/>
+<entry endPc="268437318" name="ittr" stackId="1" startPc="268435941"/>
+<entry endPc="268437446" name="mainFont" stackId="6" startPc="268437318"/>
+<entry endPc="268437446" name="actualFont" stackId="8" startPc="268437318"/>
+<entry endPc="268437446" name="main" stackId="2" startPc="268437318"/>
+<entry endPc="268437446" name="min" stackId="3" startPc="268437318"/>
+<entry endPc="268437446" name="textCol" stackId="11" startPc="268437318"/>
+<entry endPc="268437446" name="backCol" stackId="9" startPc="268437318"/>
+<entry endPc="268437446" name="graphCol" stackId="10" startPc="268437318"/>
+<entry endPc="268437446" name="max" stackId="5" startPc="268437318"/>
+<entry endPc="268437446" name="actual" stackId="4" startPc="268437318"/>
+<entry endPc="268437446" name="rangeFont" stackId="7" startPc="268437318"/>
+<entry endPc="268437446" name="dc" stackId="1" startPc="268437318"/>
+<entry endPc="268437451" name="max" stackId="4" startPc="268437446"/>
+<entry endPc="268437451" name="main" stackId="1" startPc="268437446"/>
+<entry endPc="268437451" name="min" stackId="2" startPc="268437446"/>
+<entry endPc="268437451" name="force" stackId="5" startPc="268437446"/>
+<entry endPc="268437451" name="actual" stackId="3" startPc="268437446"/>
+<entry endPc="268437487" name="hSpace" stackId="1" startPc="268437451"/>
+<entry endPc="268437505" name="val" stackId="1" startPc="268437487"/>
+<entry endPc="268437523" name="val" stackId="1" startPc="268437505"/>
+<entry endPc="268437598" name="rX" stackId="1" startPc="268437527"/>
+<entry endPc="268437706" name="rY" stackId="1" startPc="268437635"/>
+<entry endPc="268437840" name="dc" stackId="1" startPc="268437779"/>
+<entry endPc="268437840" name="data" stackId="2" startPc="268437779"/>
+<entry endPc="268437868" name="state" stackId="1" startPc="268437863"/>
+<entry endPc="268437873" name="state" stackId="1" startPc="268437868"/>
+<entry endPc="268439038" name="w" stackId="4" startPc="268437993"/>
+<entry endPc="268439038" name="width" stackId="5" startPc="268437993"/>
+<entry endPc="268439038" name="h" stackId="3" startPc="268437993"/>
+<entry endPc="268439038" name="settings" stackId="2" startPc="268437993"/>
+<entry endPc="268439039" name="dc" stackId="1" startPc="268437989"/>
+<entry endPc="268439083" name="inf" stackId="1" startPc="268439048"/>
+<entry endPc="268439292" name="hour" stackId="3" startPc="268439088"/>
+<entry endPc="268439292" name="min" stackId="4" startPc="268439088"/>
+<entry endPc="268439292" name="sec" stackId="5" startPc="268439088"/>
+<entry endPc="268439292" name="settings" stackId="1" startPc="268439088"/>
+<entry endPc="268439292" name="clockTime" stackId="2" startPc="268439088"/>
+<entry endPc="268439440" name="loc" stackId="2" startPc="268439297"/>
+<entry endPc="268439441" name="dc" stackId="1" startPc="268439293"/>
+<entry endPc="268439497" name="diff" stackId="5" startPc="268439445"/>
+<entry endPc="268439498" name="top" stackId="3" startPc="268439441"/>
+<entry endPc="268439498" name="availableHeight" stackId="4" startPc="268439441"/>
+<entry endPc="268439498" name="maximum" stackId="2" startPc="268439441"/>
+<entry endPc="268439498" name="actual" stackId="1" startPc="268439441"/>
+<entry endPc="268439561" name="position" stackId="5" startPc="268439502"/>
+<entry endPc="268439562" name="height" stackId="3" startPc="268439498"/>
+<entry endPc="268439562" name="object" stackId="1" startPc="268439498"/>
+<entry endPc="268439562" name="data" stackId="4" startPc="268439498"/>
+<entry endPc="268439562" name="top" stackId="2" startPc="268439498"/>
+<entry endPc="268439583" name="dc" stackId="1" startPc="268439562"/>
+<entry endPc="268439742" name="dc" stackId="1" startPc="268439583"/>
+<entry endPc="268439742" name="color" stackId="3" startPc="268439583"/>
+<entry endPc="268439742" name="box" stackId="2" startPc="268439583"/>
+<entry endPc="268439799" name="dc" stackId="1" startPc="268439742"/>
+<entry endPc="268439799" name="box" stackId="2" startPc="268439742"/>
+<entry endPc="268439799" name="str" stackId="3" startPc="268439742"/>
+<entry endPc="268439997" name="position" stackId="5" startPc="268439836"/>
+<entry endPc="268440019" name="dc" stackId="1" startPc="268439799"/>
+<entry endPc="268440019" name="box" stackId="2" startPc="268439799"/>
+<entry endPc="268440019" name="data" stackId="4" startPc="268439799"/>
+<entry endPc="268440019" name="str" stackId="3" startPc="268439799"/>
+<entry endPc="268440212" name="position" stackId="5" startPc="268440023"/>
+<entry endPc="268440213" name="dc" stackId="1" startPc="268440019"/>
+<entry endPc="268440213" name="box" stackId="2" startPc="268440019"/>
+<entry endPc="268440213" name="data" stackId="4" startPc="268440019"/>
+<entry endPc="268440213" name="str" stackId="3" startPc="268440019"/>
+<entry endPc="268440348" name="dc" stackId="1" startPc="268440213"/>
+<entry endPc="268440348" name="box" stackId="2" startPc="268440213"/>
+<entry endPc="268440348" name="data" stackId="4" startPc="268440213"/>
+<entry endPc="268440348" name="str" stackId="3" startPc="268440213"/>
+<entry endPc="268440399" name="dc" stackId="1" startPc="268440348"/>
+<entry endPc="268440399" name="box" stackId="2" startPc="268440348"/>
+<entry endPc="268440399" name="str" stackId="3" startPc="268440348"/>
+<entry endPc="268440450" name="dc" stackId="1" startPc="268440399"/>
+<entry endPc="268440450" name="box" stackId="2" startPc="268440399"/>
+<entry endPc="268440450" name="str" stackId="3" startPc="268440399"/>
+<entry endPc="268440501" name="dc" stackId="1" startPc="268440450"/>
+<entry endPc="268440501" name="box" stackId="2" startPc="268440450"/>
+<entry endPc="268440501" name="str" stackId="3" startPc="268440450"/>
+<entry endPc="268440552" name="dc" stackId="1" startPc="268440501"/>
+<entry endPc="268440552" name="box" stackId="2" startPc="268440501"/>
+<entry endPc="268440552" name="str" stackId="3" startPc="268440501"/>
+<entry endPc="268440603" name="dc" stackId="1" startPc="268440552"/>
+<entry endPc="268440603" name="box" stackId="2" startPc="268440552"/>
+<entry endPc="268440603" name="str" stackId="3" startPc="268440552"/>
+<entry endPc="268440983" name="first" stackId="10" startPc="268440747"/>
+<entry endPc="268440983" name="ittr" stackId="9" startPc="268440747"/>
+<entry endPc="268441081" name="tail" stackId="8" startPc="268440702"/>
+<entry endPc="268441417" name="data" stackId="12" startPc="268441280"/>
+<entry endPc="268441917" name="showMin" stackId="6" startPc="268440607"/>
+<entry endPc="268441917" name="needsHours" stackId="4" startPc="268440607"/>
+<entry endPc="268441917" name="data" stackId="14" startPc="268440607"/>
+<entry endPc="268441917" name="showActual" stackId="7" startPc="268440607"/>
+<entry endPc="268441917" name="info" stackId="13" startPc="268440607"/>
+<entry endPc="268441917" name="times" stackId="3" startPc="268440607"/>
+<entry endPc="268441917" name="showMax" stackId="5" startPc="268440607"/>
+<entry endPc="268441918" name="dc" stackId="1" startPc="268440603"/>
+<entry endPc="268441918" name="isPartial" stackId="2" startPc="268440603"/>
+<entry endPc="268441983" name="count" stackId="1" startPc="268441918"/>
+<entry endPc="268442100" name="powerInfo" stackId="1" startPc="268442035"/>
+</localVars>
+<annotations/>
+<functions>
+<functionEntry accessMode="public" name="previous" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="FixedLengthText">
+<param id="dc"/>
+<param id="string"/>
+<param id="aFont"/>
+<param id="previous"/>
+<param id="pad"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="centerY" parent="FixedLengthText">
+<param id="hSpace"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setLeft" parent="FixedLengthText">
+<param id="val"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setTop" parent="FixedLengthText">
+<param id="val"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="left" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="right" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="top" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="bottom" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="width" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="height" parent="FixedLengthText">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="write" parent="FixedLengthText">
+<param id="dc"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="Heart">
+<param id="duration"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="updateFrom" parent="Heart">
+<param id="ittr"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="TextMeasure">
+<param id="dc"/>
+<param id="main"/>
+<param id="min"/>
+<param id="actual"/>
+<param id="max"/>
+<param id="mainFont"/>
+<param id="rangeFont"/>
+<param id="actualFont"/>
+<param id="backCol"/>
+<param id="graphCol"/>
+<param id="textCol"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="updateAndDraw" parent="TextMeasure">
+<param id="main"/>
+<param id="min"/>
+<param id="actual"/>
+<param id="max"/>
+<param id="force"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="centerY" parent="TextMeasure">
+<param id="hSpace"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setLeft" parent="TextMeasure">
+<param id="val"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="setTop" parent="TextMeasure">
+<param id="val"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="left" parent="TextMeasure">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="right" parent="TextMeasure">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="top" parent="TextMeasure">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="bottom" parent="TextMeasure">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="width" parent="TextMeasure">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="height" parent="TextMeasure">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="write" parent="TextMeasure">
+<param id="dc"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="TidyWatchApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStart" parent="TidyWatchApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onStop" parent="TidyWatchApp">
+<param id="state"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="getInitialView" parent="TidyWatchApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onSettingsChanged" parent="TidyWatchApp">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onLayout" parent="TidyWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onShow" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="location" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="clockParts" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onUpdate" parent="TidyWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="positionByPartial" parent="TidyWatchView">
+<param id="actual"/>
+<param id="maximum"/>
+<param id="top"/>
+<param id="availableHeight"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="floorOffset" parent="TidyWatchView">
+<param id="object"/>
+<param id="top"/>
+<param id="height"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onPartialUpdate" parent="TidyWatchView">
+<param id="dc"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="clearBox" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="color"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="drawString" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayHour" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayMin" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displaySec" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<param id="data"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayMaxHr" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayMinHr" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayActualHr" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayStepActual" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="displayStepGoal" parent="TidyWatchView">
+<param id="dc"/>
+<param id="box"/>
+<param id="str"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="partialUpdate" parent="TidyWatchView">
+<param id="dc"/>
+<param id="isPartial"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="calculateTheThing" parent="TidyWatchView">
+<param id="count"/>
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onHide" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onExitSleep" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onEnterSleep" parent="TidyWatchView">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="initialize" parent="TWDelegate">
+<documentation/>
+</functionEntry>
+<functionEntry accessMode="public" name="onPowerBudgetExceeded" parent="TWDelegate">
+<param id="powerInfo"/>
+<documentation/>
+</functionEntry>
+</functions>
+<dataEntryOffsetMappings>
+<dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
+<dataEntry offset="222" parentId="globals" symbolId="FixedLengthText" type="class"/>
+<dataEntry offset="405" parentId="globals" symbolId="Rez" type="module"/>
+<dataEntry offset="484" parentId="Rez" symbolId="Drawables" type="module"/>
+<dataEntry offset="523" parentId="Rez" symbolId="Menus" type="module"/>
+<dataEntry offset="554" parentId="Rez" symbolId="Fonts" type="module"/>
+<dataEntry offset="625" parentId="Rez" symbolId="JsonData" type="module"/>
+<dataEntry offset="656" parentId="Rez" symbolId="Layouts" type="module"/>
+<dataEntry offset="687" parentId="Rez" symbolId="Strings" type="module"/>
+<dataEntry offset="790" parentId="globals" symbolId="TWDelegate" type="class"/>
+<dataEntry offset="845" parentId="globals" symbolId="Heart" type="class"/>
+<dataEntry offset="956" parentId="globals" symbolId="TidyWatchView" type="class"/>
+<dataEntry offset="1371" parentId="globals" symbolId="TextMeasure" type="class"/>
+<dataEntry offset="1546" parentId="globals" symbolId="TidyWatchApp" type="class"/>
+</dataEntryOffsetMappings>
+</debugInfo>

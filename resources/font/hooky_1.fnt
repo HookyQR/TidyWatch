@@ -1,0 +1,18 @@
+common lineHeight=7 base=7 pages=1
+page id=0 file="bold.png"
+chars count=15
+char id=49 x=0 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=50 x=5 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=51 x=10 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=52 x=15 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=53 x=20 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=54 x=25 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=55 x=30 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=56 x=35 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=57 x=40 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=48 x=45 y=200 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=45 x=50 y=200 width=3 height=7 xoffset=0 yoffset=0 xadvance=3 page=0 chnl=1
+char id=58 x=53 y=200 width=2 height=7 xoffset=0 yoffset=0 xadvance=2 page=0 chnl=1
+char id=46 x=55 y=200 width=2 height=7 xoffset=0 yoffset=0 xadvance=2 page=0 chnl=1
+char id=32 x=700 y=100 width=5 height=7 xoffset=0 yoffset=0 xadvance=5 page=0 chnl=1
+char id=33 x=700 y=100 width=1 height=7 xoffset=0 yoffset=0 xadvance=1 page=0 chnl=1
