@@ -1,25 +1,15 @@
 common lineHeight=43 base=43 pages=1
 page id=0 file="bold.png"
-chars count=22
-char id=49 x=0 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=50 x=30 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=51 x=60 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=52 x=90 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=53 x=120 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=54 x=150 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=55 x=180 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=56 x=210 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=57 x=240 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=48 x=270 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=45 x=300 y=60 width=18 height=43 xoffset=0 yoffset=0 xadvance=18 page=0 chnl=1
-char id=58 x=318 y=60 width=12 height=43 xoffset=0 yoffset=0 xadvance=12 page=0 chnl=1
-char id=46 x=330 y=60 width=12 height=43 xoffset=0 yoffset=0 xadvance=12 page=0 chnl=1
-char id=117 x=342 y=60 width=42 height=43 xoffset=0 yoffset=0 xadvance=42 page=0 chnl=1
-char id=100 x=384 y=60 width=42 height=43 xoffset=0 yoffset=0 xadvance=42 page=0 chnl=1
-char id=103 x=426 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=115 x=456 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=98 x=486 y=60 width=24 height=43 xoffset=0 yoffset=0 xadvance=24 page=0 chnl=1
-char id=97 x=510 y=60 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=112 x=540 y=60 width=36 height=43 xoffset=0 yoffset=0 xadvance=36 page=0 chnl=1
-char id=32 x=700 y=100 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
-char id=33 x=700 y=100 width=6 height=43 xoffset=0 yoffset=0 xadvance=6 page=0 chnl=1
+chars count=12
+char id=49 x=0 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=50 x=30 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=51 x=60 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=52 x=90 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=53 x=120 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=54 x=150 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=55 x=180 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=56 x=210 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=57 x=240 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=48 x=270 y=107 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=32 x=400 y=200 width=30 height=43 xoffset=0 yoffset=0 xadvance=30 page=0 chnl=1
+char id=33 x=400 y=200 width=6 height=43 xoffset=0 yoffset=0 xadvance=6 page=0 chnl=1

@@ -1,7 +1,18 @@
 <properties>
-
-    <property id="BackgroundColor" type="number">0x000000</property>
-    <property id="ForegroundColor" type="number">0xFF0000</property>
-    <property id="UseMilitaryFormat" type="boolean">false</property>
-
+    <property id="appVersion" type="string">1.0.0</property>
+    <property id="bgColour" type="number">0x000000</property>
+    <property id="nrColour" type="number">0xFFFFFF</property>
+    <property id="hrZone" type="boolean">true</property>
+    <property id="hrColour" type="number">0x00AAFF</property>
+    <property id="stepColour" type="number">0x00AAFF</property>
+    <property id="batteryColour" type="number">0xAAAAAA</property>
+    <property id="alarmColour" type="number">0xAA00FF</property>
+    <property id="phoneColour" type="number">0x0000FF</property>
+    <property id="dndColour" type="number">0x555555</property>
+    <property id="gpsColour" type="number">0xFF0000</property>
+    <property id="sunupColour" type="number">0xFFAA00</property>
+    <property id="sundownColour" type="number">0xFF5500</property>
+    <property id="sunupTime" type="number">0</property>
+    <property id="sundownTime" type="number">0</property>
+    <property id="showRise" type="boolean">false</property>
 </properties>

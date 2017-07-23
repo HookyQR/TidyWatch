@@ -1,15 +1,39 @@
 <strings>
+    <string id="AppName">TidyWatch</string>
 
-    <string id="AppName">TidyWatch 0.0.1alpha1</string>
+    <string id="TBgColour">Background colour</string>
+    <string id="TNrColour">Colour for numbers</string>
+    <string id="THrZone">Use HR zone colours</string>
+    <string id="THrColour">HR bar colour (if not using zone colours)</string>
+    <string id="TStepColour">Step bar colour</string>
+    <string id="TBatteryColour">Battery outline colour</string>
+    <string id="TAlarmColour">Alarm colour</string>
+    <string id="TPhoneColour">Phone connection colour</string>
+    <string id="TDNDColour">Do not disturb colour</string>
+    <string id="TGPSColour">Location active colour</string>
+    <string id="TSunupColour">Sunrise icon colour</string>
+    <string id="TSundownColour">Sundown icon colour</string>
+    <string id="TSunupTime">Dawn to show for sunrise</string>
+    <string id="TSundownTime">Dusk to show for sundown</string>
 
-    <string id="BackgroundColorTitle">Background Color</string>
-    <string id="ForegroundColorTitle">Foreground Color</string>
+    <string id="Astronomical">Astronomical</string>
+    <string id="Nautical">Nautical</string>
+    <string id="Civil">Civil</string>
+    <string id="SunR">Sunrise</string>
+    <string id="SunD">Sundown</string>
 
-    <string id="ColorBlack">Black</string>
-    <string id="ColorDarkGray">Dark Gray</string>
-    <string id="ColorLightGray">Light Gray</string>
-    <string id="ColorWhite">White</string>
-    <string id="ColorBlue">Blue</string>
-    <string id="ColorRed">Red</string>
-
+    <string id="White">White</string>
+    <string id="LightGray">Light Gray</string>
+    <string id="DarkGray">Dark Gray</string>
+    <string id="Black">Black</string>
+    <string id="Red">Red</string>
+    <string id="DarkRed">Dark Red</string>
+    <string id="Orange">Orange</string>
+    <string id="Yellow">Yellow</string>
+    <string id="Green">Green</string>
+    <string id="DarkGreen">Dark Green</string>
+    <string id="Blue">Blue</string>
+    <string id="DarkBlue">Dark Blue</string>
+    <string id="Purple">Purple</string>
+    <string id="Pink">Pink</string>
 </strings>

@@ -14,8 +14,9 @@ const dir = par => {
   } else return par;
 };
 
-const resXml = dir('.').filter(n => n.startsWith('resources/')).filter(n => n.endsWith('.xml')).join(':');
+const resXml = dir('.').filter(n => n.startsWith('resources')).filter(n => n.endsWith('.xml')).join(':');
 const source = dir('source').filter(n => n.endsWith('.mc'));
-const res = cp.spawnSync('/Users/hooky/garmin/connectiq-sdk-mac-2.3.1/bin/monkeyc', ['-o', 'bin/TidyWatch.prg', '-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d', process.argv[2] + '_sim'].concat(source), {stdio: [0,1,2]});
+console.log(['-o', 'bin/TidyWatch.prg', '-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d'].concat(process.argv.slice(2)).concat(source).join(" "));
+const res = cp.spawnSync('/Users/hooky/garmin/connectiq-sdk-mac-2.3.1/bin/monkeyc', ['-o', 'bin/TidyWatch.prg', '-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d'].concat(process.argv.slice(2)).concat(source), {stdio: [0,1,2]});
 
 console.log("Code:", res.status);

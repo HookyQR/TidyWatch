@@ -1,18 +1,15 @@
 common lineHeight=8 base=8 pages=1
 page id=0 file="bold.png"
-chars count=15
-char id=49 x=0 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=50 x=7 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=51 x=14 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=52 x=21 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=53 x=28 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=54 x=35 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=55 x=42 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=56 x=49 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=57 x=56 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=48 x=63 y=190 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=45 x=70 y=190 width=4 height=8 xoffset=0 yoffset=0 xadvance=4 page=0 chnl=1
-char id=58 x=74 y=190 width=3 height=8 xoffset=0 yoffset=0 xadvance=3 page=0 chnl=1
-char id=46 x=77 y=190 width=3 height=8 xoffset=0 yoffset=0 xadvance=3 page=0 chnl=1
-char id=32 x=700 y=100 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
-char id=33 x=700 y=100 width=1 height=8 xoffset=0 yoffset=0 xadvance=1 page=0 chnl=1
+chars count=12
+char id=49 x=0 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=50 x=7 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=51 x=14 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=52 x=21 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=53 x=28 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=54 x=35 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=55 x=42 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=56 x=49 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=57 x=56 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=48 x=63 y=250 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=32 x=400 y=200 width=7 height=8 xoffset=0 yoffset=0 xadvance=7 page=0 chnl=1
+char id=33 x=400 y=200 width=1 height=8 xoffset=0 yoffset=0 xadvance=1 page=0 chnl=1

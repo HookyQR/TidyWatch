@@ -1,6 +1,6 @@
 common lineHeight=57 base=57 pages=1
 page id=0 file="bold.png"
-chars count=22
+chars count=12
 char id=49 x=0 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
 char id=50 x=40 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
 char id=51 x=80 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
@@ -11,15 +11,5 @@ char id=55 x=240 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 c
 char id=56 x=280 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
 char id=57 x=320 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
 char id=48 x=360 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
-char id=45 x=400 y=0 width=24 height=57 xoffset=0 yoffset=0 xadvance=24 page=0 chnl=1
-char id=58 x=424 y=0 width=16 height=57 xoffset=0 yoffset=0 xadvance=16 page=0 chnl=1
-char id=46 x=440 y=0 width=16 height=57 xoffset=0 yoffset=0 xadvance=16 page=0 chnl=1
-char id=117 x=456 y=0 width=56 height=57 xoffset=0 yoffset=0 xadvance=56 page=0 chnl=1
-char id=100 x=512 y=0 width=56 height=57 xoffset=0 yoffset=0 xadvance=56 page=0 chnl=1
-char id=103 x=568 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
-char id=115 x=608 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
-char id=98 x=648 y=0 width=32 height=57 xoffset=0 yoffset=0 xadvance=32 page=0 chnl=1
-char id=97 x=680 y=0 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
-char id=112 x=720 y=0 width=48 height=57 xoffset=0 yoffset=0 xadvance=48 page=0 chnl=1
-char id=32 x=700 y=100 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
-char id=33 x=700 y=100 width=8 height=57 xoffset=0 yoffset=0 xadvance=8 page=0 chnl=1
+char id=32 x=400 y=200 width=40 height=57 xoffset=0 yoffset=0 xadvance=40 page=0 chnl=1
+char id=33 x=400 y=200 width=8 height=57 xoffset=0 yoffset=0 xadvance=8 page=0 chnl=1

@@ -4,6 +4,8 @@ using Toybox.System as Sys;
 
 class TidyWatchApp extends App.AppBase {
 
+    var data = new TidyData();
+
     function initialize() {
         AppBase.initialize();
     }
@@ -18,11 +20,18 @@ class TidyWatchApp extends App.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new TidyWatchView(), new TWDelegate() ];
+        var view = new TidyWatchView();
+        view.setData(data);
+        if (Ui has :WatchFaceDelegate) {
+            return [ view, new TWDelegate() ];
+        } else {
+            return [ view ];
+        }
     }
 
     // New app settings have been received so trigger a UI update
     function onSettingsChanged() {
+        view.clear();
         Ui.requestUpdate();
     }
 }
