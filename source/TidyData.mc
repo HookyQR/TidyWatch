@@ -59,12 +59,13 @@ class TidyData {
     if ( loc != null && (loc.toRadians()[0] != persistedLocation[0] || loc.toRadians()[1] != persistedLocation[1])) {
       persistedLocation = loc.toRadians();
       App.getApp().setProperty("location", persistedLocation);
-    }
+    } 
+
     clockTime = Sys.getClockTime();
     zones = UP.getHeartRateZones(UP.HR_ZONE_SPORT_GENERIC);
     date = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT).day;
 
-    sunData.calculate(persistedLocation, App.getApp().getProperty("sundownTime"), App.getApp().getProperty("sundownTime"));
+    sunData.calculate(persistedLocation, App.getApp().getProperty("sunupTime"), App.getApp().getProperty("sundownTime"));
 
     if( getHr && (ActMon has: getHeartRateHistory)) {
       try {

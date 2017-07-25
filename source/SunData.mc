@@ -27,13 +27,13 @@ class SunData {
   }
 
   function calculate(position, refUp, refDn) {
+    Sys.println("Calc");
     if ( position == null || position[0] == null ) {
       sunRiseTime = [null, null];
       sunSetTime = [null, null];
       return;
     }
 
-    position  = [-41.1244/180*Math.PI, 175.0708/180*Math.PI];
     var timeInfo;
     var dateString;
     var jDate;
