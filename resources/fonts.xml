@@ -1,14 +1,9 @@
 <resources>
     <fonts>
-        <!-- <font id="xsmall" filename="font/hooky_1.5.fnt"  antialias="true" />
-        <font id="small" filename="font/hooky_2.fnt"  antialias="true" />
-        <font id="medium" filename="font/hooky_3.fnt"  antialias="true" />
-        <font id="large" filename="font/hooky_5.fnt"  antialias="true" />
-        <font id="xlarge" filename="font/hooky_8.fnt"  antialias="true" /> -->
-         <font id="xsmall" filename="font/hooky_1.5.fnt"  antialias="true" />
+         <font id="xsmall" filename="font/hooky_1.fnt"  antialias="true" />
         <font id="small" filename="font/hooky_2.fnt"  antialias="true" />
         <font id="medium" filename="font/hooky_2.fnt"  antialias="true" />
         <font id="large" filename="font/hooky_2.fnt"  antialias="true" />
-        <font id="xlarge" filename="font/hooky_2.fnt"  antialias="true" /> 
+        <font id="xlarge" filename="font/hooky_2.fnt"  antialias="true" />
     </fonts>
 </resources>

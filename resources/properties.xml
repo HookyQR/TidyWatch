@@ -1,5 +1,6 @@
 <properties>
     <property id="appVersion" type="string">1.0.0</property>
+
     <property id="bgColour" type="number">0x000000</property>
     <property id="nrColour" type="number">0xFFFFFF</property>
     <property id="hrZone" type="boolean">true</property>
@@ -14,5 +15,5 @@
     <property id="sundownColour" type="number">0xFF5500</property>
     <property id="sunupTime" type="number">0</property>
     <property id="sundownTime" type="number">0</property>
-    <property id="showRise" type="boolean">false</property>
+    <property id="showRise" type="boolean">true</property>
 </properties>

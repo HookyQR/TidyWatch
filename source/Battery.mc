@@ -15,7 +15,7 @@ class Battery extends Box {
     else                { dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_TRANSPARENT); }
 
     var fillTotal = 1 + value() / 6;
-    dc.fillRectangle(x+5, y+1+height()/3, fillTotal, height()/3+1);
+    dc.fillRectangle(x+5, y+height()/3, fillTotal, height()/3+1);
     if ( value() > 5.0){
       if ( bg instanceof Lang.Method) { dc.setColor(bg.invoke(nr), Gfx.COLOR_TRANSPARENT); }
       else { dc.setColor(bg, Gfx.COLOR_TRANSPARENT); }

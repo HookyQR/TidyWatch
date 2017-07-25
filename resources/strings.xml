@@ -13,14 +13,15 @@
     <string id="TGPSColour">Location active colour</string>
     <string id="TSunupColour">Sunrise icon colour</string>
     <string id="TSundownColour">Sundown icon colour</string>
-    <string id="TSunupTime">Dawn to show for sunrise</string>
-    <string id="TSundownTime">Dusk to show for sundown</string>
+    <string id="TShowRise">Show sun rise and sun set</string>
+    <string id="TSunupTime">Dawn/Rise to show for sunrise</string>
+    <string id="TSundownTime">Dusk/Set to show for sundown</string>
 
     <string id="Astronomical">Astronomical</string>
     <string id="Nautical">Nautical</string>
     <string id="Civil">Civil</string>
     <string id="SunR">Sunrise</string>
-    <string id="SunD">Sundown</string>
+    <string id="SunD">Sunset</string>
 
     <string id="White">White</string>
     <string id="LightGray">Light Gray</string>

@@ -59,8 +59,8 @@ class Row {
 
     if(good && partial) { return; }
     dc.setColor(fg, fg);
-    if ( dc has :setClip) { dc.setClip(left(), top(), width(), height()); }
-    dc.fillRectangle(left(), top(), width(), height());
+    if ( dc has :setClip) { dc.setClip(left(), top()+1, width(), height()); }
+    dc.fillRectangle(left(), top()+1, width(), height());
 
     var p = (dim[0] - w)/2;
     for(i=0; i < elem.size(); i++) {

@@ -73,10 +73,10 @@ class MonitorNumber extends DisplayNumber {
     var a = actualV();
     var t = topV();
 
-    var r = t - bottomV();
+    var r = 1.0 * t - bottomV();
     r = r <= 0 ? 1 : r;
     r = height() * (r - a + bottomV()) / r;
-    return r < 0 ? 0 : r;
+    return r <= 0 ? 0 : r < 1 ? 1 : r; // hold back the little bit to fill
   }
   function fullHeight() {
     return height() + info.height() + 4;
@@ -91,7 +91,6 @@ class MonitorNumber extends DisplayNumber {
     dc.setColor(mainColor, mainColor);
     dc.fillRectangle(x, y + 1, width(), p);
     dc.setColor(c, c);
-    Sys.println("Printing from " + p + " with " + c + " " + height());
     dc.fillRectangle(x, y + p + 1, width(), height() - p);
 
     DisplayNumber.draw(dc);

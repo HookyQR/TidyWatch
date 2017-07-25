@@ -2,23 +2,23 @@
     <iq:application entry="TidyWatchApp" id="02C99863331C4C62821320A87182D28B" launcherIcon="@Drawables.LauncherIcon" name="@Strings.AppName" type="watchface">
         <iq:products>
             <iq:product id="vivoactive_hr"/>
-            <iq:product id="fenix3"/>
-            <iq:product id="fenix5"/>
-            <iq:product id="d2bravo"/>
-            <iq:product id="fenix5s"/>
-            <iq:product id="fr735xt"/>
-            <iq:product id="vivoactive"/>
-            <iq:product id="fr230"/>
-            <iq:product id="fenix5x"/>
-            <iq:product id="fr630"/>
             <iq:product id="epix"/>
-            <iq:product id="approachs60"/>
-            <iq:product id="d2bravo_titanium"/>
-            <iq:product id="fr235"/>
             <iq:product id="fr920xt"/>
-            <iq:product id="fenixchronos"/>
+            <iq:product id="fr735xt"/>
+            <iq:product id="fr230"/>
+            <iq:product id="fr235"/>
+            <iq:product id="fr630"/>
+            <iq:product id="d2bravo"/>
+            <iq:product id="d2bravo_titanium"/>
+            <iq:product id="fenix3"/>
             <iq:product id="fenix3_hr"/>
+            <iq:product id="fenix5s"/>
+            <iq:product id="fenixchronos"/>
+            <iq:product id="fenix5"/>
+            <iq:product id="fenix5x"/>
+            <iq:product id="vivoactive"/>
             <iq:product id="fr935"/>
+            <iq:product id="approachs60"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="UserProfile" />

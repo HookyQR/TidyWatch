@@ -7,24 +7,23 @@ const path = require('path');
 const cp = require('child_process');
 
 const setup = [
-  { height: 57, blockWidth: 8,  chars: "1234567890" },
-  { height: 50, blockWidth: 7,  chars: "1234567890" },
-  { height: 43, blockWidth: 6,  chars: "1234567890" },
-  { height: 36, blockWidth: 5,  chars: "1234567890" },
-  { height: 28, blockWidth: 4,  chars: "1234567890" },
-  { height: 22, blockWidth: 3,  chars: "1234567890-:.udgsbap" },
-  { height: 14, blockWidth: 2,  chars: "1234567890" },
-  { height: 8,  blockWidth:1.5, chars: "1234567890" },
-  { height: 7,  blockWidth: 1,  chars: "1234567890" },
+  { height: 56, blockWidth: 8,  chars: "0123456789" },
+  { height: 49, blockWidth: 7,  chars: "0123456789" },
+  { height: 42, blockWidth: 6,  chars: "0123456789" },
+  { height: 35, blockWidth: 5,  chars: "0123456789" },
+  { height: 28, blockWidth: 4,  chars: "0123456789" },
+  { height: 21, blockWidth: 3,  chars: "0123456789absgdup" },
+  { height: 14, blockWidth: 2,  chars: "0123456789" },
+  { height: 9,  blockWidth:1.5, chars: "0123456789" },
+  { height: 7,  blockWidth: 1,  chars: "0123456789" },
 ];
 
 const refWidth = {
-  2: ':.',
-  3: '-',
   5: '1234567890',
-  6: 'b',
-  7: 'gsa',
-  9: 'udp'
+  6: 'bsg',
+  7: 'a',
+  9: 'p',
+  10: 'ud'
 };
 
 const charRef = {};
@@ -38,7 +37,7 @@ setup.forEach(setting => {
   const fName = path.join.apply(path, root.concat(`hooky_${setting.blockWidth}.fnt`));
   const out = fs.createWriteStream(fName);
   out.write(`common lineHeight=${setting.height} base=${setting.height} pages=1
-page id=0 file="bold.png"
+page id=0 file="hooky.png"
 chars count=${setting.chars.length+2}
 `, () => {
     let osX = 0;

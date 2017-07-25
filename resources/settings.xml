@@ -37,7 +37,7 @@
   </setting>
   <setting propertyKey="@Properties.hrZone" title="@Strings.THrZone">
     <settingConfig type="boolean" />
-  </settings>
+  </setting>
   <setting propertyKey="@Properties.hrColour" title="@Strings.THrColour">
     <settingConfig type="list">
       <listEntry value="0xFFFFFF">@Strings.White</listEntry>
@@ -92,7 +92,7 @@
       <listEntry value="0xFF00FF">@Strings.Pink</listEntry>
     </settingConfig>
   </setting>
-  <setting propertyKey="@Properties.alarmColour" title="@Strings.TAlarmColour">
+  <setting propertyKey="@Properties.dndColour" title="@Strings.TDNDColour">
     <settingConfig type="list">
       <listEntry value="0xFFFFFF">@Strings.White</listEntry>
       <listEntry value="0xAAAAAA">@Strings.LightGray</listEntry>
@@ -127,7 +127,7 @@
       <listEntry value="0xAA00FF">@Strings.Purple</listEntry>
     </settingConfig>
   </setting>
-  <setting propertyKey="@Properties.dndColour" title="@Strings.TDNDColour">
+  <setting propertyKey="@Properties.alarmColour" title="@Strings.TAlarmColour">
     <settingConfig type="list">
       <listEntry value="0xFFFFFF">@Strings.White</listEntry>
       <listEntry value="0xAAAAAA">@Strings.LightGray</listEntry>
@@ -163,7 +163,6 @@
       <listEntry value="0xFF00FF">@Strings.Pink</listEntry>
     </settingConfig>
   </setting>
-  <!--
   <setting propertyKey="@Properties.sunupColour" title="@Strings.TSunupColour">
     <settingConfig type="list">
       <listEntry value="0xFFFFFF">@Strings.White</listEntry>
@@ -200,21 +199,23 @@
       <listEntry value="0xFF00FF">@Strings.Pink</listEntry>
     </settingConfig>
   </setting>
+  <setting propertyKey="@Properties.showRise" title="@Strings.TShowRise">
+    <settingConfig type="boolean" />
+  </setting>
   <setting propertyKey="@Properties.sunupTime" title="@Strings.TSunupTime">
     <settingConfig type="list">
       <listEntry value="0">@Strings.SunR</listEntry>
-      <listEntry value="6">@Strings.Civil</listEntry>
-      <listEntry value="12">@Strings.Nautical</listEntry>
-      <listEntry value="18">@Strings.Astronomical</listEntry>
+      <listEntry value="1">@Strings.Civil</listEntry>
+      <listEntry value="2">@Strings.Nautical</listEntry>
+      <listEntry value="3">@Strings.Astronomical</listEntry>
     </settingConfig>
   </setting>
   <setting propertyKey="@Properties.sundownTime" title="@Strings.TSundownTime">
     <settingConfig type="list">
       <listEntry value="0">@Strings.SunD</listEntry>
-      <listEntry value="6">@Strings.Civil</listEntry>
-      <listEntry value="12">@Strings.Nautical</listEntry>
-      <listEntry value="18">@Strings.Astronomical</listEntry>
+      <listEntry value="1">@Strings.Civil</listEntry>
+      <listEntry value="2">@Strings.Nautical</listEntry>
+      <listEntry value="3">@Strings.Astronomical</listEntry>
     </settingConfig>
   </setting>
-  -->
 </settings>
