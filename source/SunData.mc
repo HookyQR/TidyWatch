@@ -31,14 +31,17 @@ class SunData {
       return;
     }
 
+    // position = [-41.1244/180*Math.PI, 175.0708/180*Math.PI]; // Test mock
+
     var timeInfo;
     var dateString;
     var jDate;
     var now = Time.now().value();
     var day = Time.Gregorian.info(new Time.Moment(now), Time.FORMAT_SHORT).day;
+
     if ( pos[0] != position[0] ||
       pos[1] != position[1] ||
-      refUp != ref[0] ||
+      refUp != ref[0] || //these will trigger the first run
       refDn != ref[1] ||
       sunRise <= now ||
       sunSet <= now ) {
@@ -52,9 +55,9 @@ class SunData {
       sunSet = nextSet(now, jDate);
     }
     timeInfo = Time.Gregorian.info(new Time.Moment(sunRise), Time.FORMAT_SHORT);
-    sunRiseTime = [timeInfo.hour, timeInfo.min];
+    sunRiseTime = [timeInfo.hour, timeInfo.min, timeInfo.day];
     timeInfo = Time.Gregorian.info(new Time.Moment(sunSet), Time.FORMAT_SHORT);
-    sunSetTime = [timeInfo.hour, timeInfo.min];
+    sunSetTime = [timeInfo.hour, timeInfo.min, timeInfo.day];
   }
 
   function ha(alt, dec) {
@@ -94,7 +97,7 @@ class SunData {
   }
 
   function decAndMid(day) {
-    var j = day + 0.5 - pos[1] / 2 / Math.PI;
+    var j = day + 0.5 - pos[1] / 2 / Math.PI + 0.0001;
     var M = 6.24005997 + 0.01720197 * j;
     var C = (
       1.9148 * Math.sin(M) +
@@ -103,7 +106,7 @@ class SunData {
     var l = M + C + Math.PI + 1.79659306;
 
     var dec = Math.asin(Math.sin(l) * 0.39778851);
-    var J = j + 0.0053 * Math.sin(M) - 0.0069 * Math.sin(2 * l) + 0.0001;
+    var J = j + 0.0053 * Math.sin(M) - 0.0069 * Math.sin(2 * l);
     return [dec, J];
   }
 }

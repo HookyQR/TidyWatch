@@ -227,14 +227,13 @@ class TidyWatchView extends Ui.WatchFace {
 
     tidyData.refresh(false);
 
-    var offset = tidyData.clockTime.sec % 4;
+    var offset = tidyData.clockTime.sec % 6;
 
     sec.partial(dc);
 
     switch(offset){
       case 0: { row.partial(dc); break; }
-      case 2: { break; }
-      default: { minute.partial(dc); break; }
+      case 3: { minute.partial(dc); break; }
     }
   }
 }

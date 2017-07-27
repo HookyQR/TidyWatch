@@ -56,7 +56,9 @@ class TidyData {
     info = ActMon.getInfo();
     var ai = Act.getActivityInfo();
     loc = ai ? ai.currentLocation : null;
-    if ( loc != null && (loc.toRadians()[0] != persistedLocation[0] || loc.toRadians()[1] != persistedLocation[1])) {
+    if ( loc != null &&
+        loc.toRadians()[0] != null &&
+      (loc.toRadians()[0] != persistedLocation[0] || loc.toRadians()[1] != persistedLocation[1])) {
       persistedLocation = loc.toRadians();
       App.getApp().setProperty("location", persistedLocation);
     }
@@ -129,14 +131,18 @@ class TidyData {
 
   function riseHour() { return hourFmt(sunData.sunRiseTime[0]); }
   function riseMin() { return sunData.sunRiseTime[1]; }
+  function riseTomorrow() { return sunData.sunRiseTime[2] > date; }
   function setHour() { return hourFmt(sunData.sunSetTime[0]); }
   function setMin() { return sunData.sunSetTime[1]; }
+  function setTomorrow() { return sunData.sunSetTime[2] > date; }
 
-  function currentSteps() { return info == null ? null : info.steps; }
-  function targetSteps() { return info == null ? null : info.stepGoal; }
+  function currentSteps() { return info == null ? null : info.stepGoal == 0 ? null : info.steps; }
+  function targetSteps() { return info == null ? null : info.stepGoal == 0 ? null : info.stepGoal; }
+
   function hrMin() { return hr[0]; }
   function hrMax() { return hr[1]; }
   function hrActual() { return hr[2]; }
+
   function minute() {return clockTime.min; }
   function second() { return clockTime.sec; }
   function hour() { return hourFmt(clockTime.hour); }
