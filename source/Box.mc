@@ -1,5 +1,4 @@
 using Toybox.Graphics as Gfx;
-using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
 
@@ -22,10 +21,11 @@ class Box {
     if ( state == null || state == false) { return 0; }
     return dim[0];
   }
-  function fixValue() {
+  function changed() {
+    var preState = state;
     state = null;
     if ( cb != null) { state = cb.invoke(); }
-    return state;
+    return preState == state;
   }
 
   function value() { return state; }

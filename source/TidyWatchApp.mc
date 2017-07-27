@@ -1,6 +1,5 @@
 using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
-using Toybox.System as Sys;
 
 class TidyWatchApp extends App.AppBase {
 

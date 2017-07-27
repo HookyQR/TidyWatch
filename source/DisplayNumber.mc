@@ -1,5 +1,4 @@
 using Toybox.Graphics as Gfx;
-using Toybox.System as Sys;
 using Toybox.Lang as Lang;
 using Toybox.Application as App;
 
@@ -14,7 +13,7 @@ class DisplayNumber {
   var align = Gfx.TEXT_JUSTIFY_RIGHT;
   var preValue = null;
   var cb = null;
-
+  var storedValue = null;
   function initialize(dc, options) {
     fg = App.getApp().getProperty("bgColour");
     font = options[:font];
@@ -24,8 +23,9 @@ class DisplayNumber {
     cb = options[:callback];
     bg = options[:color] ? options[:color] : App.getApp().getProperty("nrColour");
   }
-  function fixValue() {
-    return value();
+  function changed() {
+    var preValue = storedValue;
+    return value() == preValue;
   }
   function join(tgt, src) {
     var keys = src.keys();
@@ -37,8 +37,9 @@ class DisplayNumber {
   }
 
   function value() {
-    if ( cb != null) {return cb.invoke(); }
-    return null;
+    storedValue = null;
+    if ( cb != null) { storedValue = cb.invoke(); }
+    return storedValue;
   }
 
   function setFG(color) { fg = color; }

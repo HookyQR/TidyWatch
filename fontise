@@ -13,7 +13,7 @@ const setup = [
   { height: 35, blockWidth: 5,  chars: "0123456789" },
   { height: 28, blockWidth: 4,  chars: "0123456789" },
   { height: 21, blockWidth: 3,  chars: "0123456789absgdup" },
-  { height: 14, blockWidth: 2,  chars: "0123456789" },
+  { height: 14, blockWidth: 2,  chars: "0123456789absgdup" },
   { height: 9,  blockWidth:1.5, chars: "0123456789" },
   { height: 7,  blockWidth: 1,  chars: "0123456789" },
 ];

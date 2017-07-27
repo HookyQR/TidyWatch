@@ -1,5 +1,5 @@
 <properties>
-    <property id="appVersion" type="string">1.0.0</property>
+    <property id="appVersion" type="string">0.1.0</property>
 
     <property id="bgColour" type="number">0x000000</property>
     <property id="nrColour" type="number">0xFFFFFF</property>
@@ -16,4 +16,7 @@
     <property id="sunupTime" type="number">0</property>
     <property id="sundownTime" type="number">0</property>
     <property id="showRise" type="boolean">true</property>
+
+    <property id="sideBySide" type="boolean">false</property>
+
 </properties>

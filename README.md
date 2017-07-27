@@ -1,0 +1,17 @@
+Source for Garmin Tidy watch:
+
+![](images/D2bravo.png)
+![](images/fenix3_hr.png)
+![](images/forerunner230.png)
+![](images/forerunner735xt.png)
+![](images/forerunner935sq.png)
+![](images/chronos.png)
+![](images/fenix5.png)
+![](images/forerunner235.png)
+![](images/forerunner920.png)
+![](images/vivoactive.png)
+![](images/epix.png)
+![](images/fenix5s.png)
+![](images/forerunner630.png)
+![](images/forerunner935.png)
+![](images/vivoactive_hr.png)

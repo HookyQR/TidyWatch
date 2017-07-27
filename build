@@ -17,6 +17,7 @@ const dir = par => {
 const resXml = dir('.').filter(n => n.startsWith('resources')).filter(n => n.endsWith('.xml')).join(':');
 const source = dir('source').filter(n => n.endsWith('.mc'));
 console.log(['-o', 'bin/TidyWatch.prg', '-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d'].concat(process.argv.slice(2)).concat(source).join(" "));
-const res = cp.spawnSync('/Users/hooky/garmin/connectiq-sdk-mac-2.3.1/bin/monkeyc', ['-o', 'bin/TidyWatch.prg', '-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d'].concat(process.argv.slice(2)).concat(source), {stdio: [0,1,2]});
+const res = cp.spawnSync('/Users/hooky/garmin/connectiq-sdk-mac-2.3.1/bin/monkeyc', ['-w', '-y', '../developer_key.der', '-z', resXml, '-m', 'manifest.xml', '-d'].concat(process.argv.slice(2)).concat(source), {stdio: [0,1,2]});
 
-console.log("Code:", res.status);
+if ( res.status !== 0 ) { console.log("FAILED :: Code:", res.status); }
+process.exit(res.status);

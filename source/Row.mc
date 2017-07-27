@@ -1,11 +1,7 @@
-using Toybox.Graphics as Gfx;
-using Toybox.System as Sys;
-using Toybox.Lang as Lang;
 using Toybox.Application as App;
 
 class Row {
   var elem;
-  var state = [];
   var fg = App.getApp().getProperty("bgColour");
   var dim = [0,0];
   var x, y;
@@ -16,8 +12,7 @@ class Row {
     for(var i=0; i< elem.size(); i++) {
       w += elem[i].width();
       h = elem[i].height() > h ? elem[i].height() : h;
-      elem[i].fixValue();
-      state.add(null);
+      elem[i].changed(); // force create
     }
     dim = [w, h];
   }
@@ -50,14 +45,14 @@ class Row {
 
   function doDraw(dc, partial) {
     var w = 0;
-    var good = true;
+    var good = 0;
     var i;
     for(i=0; i < elem.size(); i++) {
-      good = good && elem[i].fixValue() == state[i];
+      if (elem[i].changed()) { good += 1; }
       w += elem[i].width();
     }
 
-    if(good && partial) { return; }
+    if(good == elem.size() && partial) { return; }
     dc.setColor(fg, fg);
     if ( dc has :setClip) { dc.setClip(left(), top()+1, width(), height()); }
     dc.fillRectangle(left(), top()+1, width(), height());
@@ -67,7 +62,6 @@ class Row {
       elem[i].setLeft(x+p);
       elem[i].draw(dc);
       p += elem[i].width();
-      state[i] = elem[i].value();
     }
   }
 

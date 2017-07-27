@@ -1,6 +1,4 @@
 using Toybox.Graphics as Gfx;
-using Toybox.System as Sys;
-using Toybox.Lang as Lang;
 
 class RangedNumber extends DisplayNumber {
   var minBox;

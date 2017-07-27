@@ -1,10 +1,7 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
-using Toybox.Lang as Lang;
 using Toybox.Application as App;
-using Toybox.Activity as Act;
-using Toybox.ActivityMonitor as ActMon;
 using Toybox.Time as Time;
 using Toybox.UserProfile as UP;
 
@@ -23,6 +20,7 @@ class TidyWatchView extends Ui.WatchFace {
   function onLayout(dc) {
     tidyData.refresh(true);
     build(dc);
+    rebuildRequired = false;
   }
 
   function build(dc){
@@ -62,39 +60,73 @@ class TidyWatchView extends Ui.WatchFace {
       }),
       new DisplayNumber(dc, {
         :callback => tidyData.method(:mday),
-        :font => fontMed, :length => 2, :zero => false
+        :font => fontSm, :length => 2, :zero => false
       })
     ]);
 
-    rise = new Row( dc, [
-      new DisplayNumber(dc, {
-        :callback => tidyData.method(:riseHour),
-        :font => fontMed, :length => 2, :zero => tidyData.settings.is24Hour
-      }),
-      new DisplayNumber(dc, {
-        :callback => tidyData.method(:riseMin),
-        :font => fontMed, :length => 2, :zero => true
-      }),
-      new Box(dc, {
-        :char => "!u", :callback => tidyData.method(:riseHour),
-        :color => App.getApp().getProperty("sunupColour"), :font => fontMed
-      })
-    ]);
+    if(App.getApp().getProperty("sideBySide")){
+      rise = new Row( dc, [
+        new Box(dc, {
+          :char => "u!", :callback => tidyData.method(:riseHour),
+          :color => App.getApp().getProperty("sunupColour"), :font => fontSm
+        }),
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:riseHour),
+          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+        }),
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:riseMin),
+          :font => fontSm, :length => 2, :zero => true
+        }),
+        new Box(dc, {
+          :char => "  ", :callback => tidyData.method(:always),
+          :color => App.getApp().getProperty("sunupColour"), :font => fontSm
+        }),
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:setHour),
+          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+        }),
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:setMin),
+          :font => fontSm, :length => 2, :zero => true
+        }),
+        new Box(dc, {
+          :char => "!d", :callback => tidyData.method(:setHour),
+          :color => App.getApp().getProperty("sundownColour"), :font => fontSm
+        })
+      ]);
+      set = null;
+    } else {
+      rise = new Row( dc, [
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:riseHour),
+          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+        }),
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:riseMin),
+          :font => fontSm, :length => 2, :zero => true
+        }),
+        new Box(dc, {
+          :char => "!u", :callback => tidyData.method(:riseHour),
+          :color => App.getApp().getProperty("sunupColour"), :font => fontSm
+        })
+      ]);
 
-    set = new Row( dc, [
-      new DisplayNumber(dc, {
-        :callback => tidyData.method(:setHour),
-        :font => fontMed, :length => 2, :zero => tidyData.settings.is24Hour
-      }),
-      new DisplayNumber(dc, {
-        :callback => tidyData.method(:setMin),
-        :font => fontMed, :length => 2, :zero => true
-      }),
-      new Box(dc, {
-        :char => "!d", :callback => tidyData.method(:setHour),
-        :color => App.getApp().getProperty("sundownColour"), :font => fontMed
-      })
-    ]);
+      set = new Row( dc, [
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:setHour),
+          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+        }),
+        new DisplayNumber(dc, {
+          :callback => tidyData.method(:setMin),
+          :font => fontSm, :length => 2, :zero => true
+        }),
+        new Box(dc, {
+          :char => "!d", :callback => tidyData.method(:setHour),
+          :color => App.getApp().getProperty("sundownColour"), :font => fontSm
+        })
+      ]);
+    }
     hour = new MonitorNumber(dc, {
       :font => fontXLg,
       :length => 2,
@@ -132,8 +164,6 @@ class TidyWatchView extends Ui.WatchFace {
         :max => {:font => fontXSm }
       }});
 
-    var h = dc.getHeight();
-    var w = dc.getWidth();
 
     sec = new FloorNumber(dc, {
       :font => fontLg,
@@ -145,25 +175,39 @@ class TidyWatchView extends Ui.WatchFace {
       :callback => tidyData.method(:second)
     });
 
-    var top = (h - hour.height()) / 2;
-
     mainRow = new Row(dc, [hour, minute, sec]);
-    var pad = h < 200 ? 7 : 14;
+
+    var h = dc.getHeight();
+    var w = dc.getWidth();
+
+    var top = (h - hour.height()) / 2;
+    var pad = h < 200 ? 10 : 14;
 
     row.center(w);
     mainRow.center(w);
-    rise.center(w);
-    set.center(w);
 
-    mainRow.setTop(top + 14 - pad);
-    row.above(mainRow, pad);
-    rise.above(row, pad);
-    set.setTop(hour.top() + hour.fullHeight() + pad*2);
+    if(App.getApp().getProperty("sideBySide")){
+      top -= rise.height();
+      mainRow.setTop(top + 14 - pad);
+      row.above(mainRow, pad);
+      rise.below(mainRow, pad * 2 + rise.height());
+      rise.center(w);
+    } else {
+      mainRow.setTop(top + 14 - pad);
+      row.above(mainRow, pad);
+      rise.center(w);
+      set.center(w);
+      rise.above(row, pad);
+      set.setTop(hour.top() + hour.fullHeight() + pad*2);
+    }
   }
 
   function onUpdate(dc) {
     tidyData.refresh(true);
-    if (rebuildRequired) { build(dc); }
+    if (rebuildRequired) {
+      build(dc);
+      rebuildRequired = false;
+    }
 
     dc.setColor(App.getApp().getProperty("bgColour"), App.getApp().getProperty("bgColour"));
     if ( dc has :setClip) { dc.setClip(0, 0, dc.getWidth() + 1, dc.getHeight() + 1); }
@@ -174,11 +218,13 @@ class TidyWatchView extends Ui.WatchFace {
     row.draw(dc);
     if ( showRise ) {
       rise.draw(dc);
-      set.draw(dc);
+      if(set != null) { set.draw(dc); }
     }
   }
 
   function onPartialUpdate(dc) {
+    if(rebuildRequired) { return; } // we're waiting for onUpdate to trigger the rebuild
+
     tidyData.refresh(false);
 
     var offset = tidyData.clockTime.sec % 4;

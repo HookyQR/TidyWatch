@@ -1,6 +1,5 @@
 using Toybox.Graphics as Gfx;
 using Toybox.Lang as Lang;
-using Toybox.System as Sys;
 
 class MonitorNumber extends DisplayNumber {
   var info;
@@ -11,7 +10,7 @@ class MonitorNumber extends DisplayNumber {
   var actualCB = null;
   var prevPos = 0;
   var position;
-  
+
   function initialize(dc, options) {
     DisplayNumber.initialize(dc, options);
     setBG(Gfx.COLOR_TRANSPARENT);
@@ -73,28 +72,30 @@ class MonitorNumber extends DisplayNumber {
     var a = actualV();
     var t = topV();
 
-    var r = 1.0 * t - bottomV();
+    var r = t - bottomV();
     r = r <= 0 ? 1 : r;
     r = height() * (r - a + bottomV()) / r;
-    return r <= 0 ? 0 : r < 1 ? 1 : r; // hold back the little bit to fill
+    // hold back the little bit at the top until it's really full
+    // never < 0, r if 1+, otherwise, only zero if it's really full
+    return r < 0 ? 0 : r > 0 ? r : a == t ? 0 : 1;
   }
   function fullHeight() {
     return height() + info.height() + 4;
   }
   function draw(dc) {
+    info.draw(dc);
+
     if (dc has :setClip) { dc.setClip(x, y + 1, width(), height()); }
     var p = pos();
     prevPos = p;
     var c = fillColor;
     if (fillColor instanceof Lang.Method) { c = fillColor.invoke(actualV()); }
-
     dc.setColor(mainColor, mainColor);
     dc.fillRectangle(x, y + 1, width(), p);
     dc.setColor(c, c);
     dc.fillRectangle(x, y + p + 1, width(), height() - p);
 
     DisplayNumber.draw(dc);
-    info.draw(dc);
   }
 
   function partial(dc) {

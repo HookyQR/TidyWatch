@@ -1,7 +1,5 @@
 using Toybox.Time;
 using Toybox.Math;
-using Toybox.System as Sys;
-using Toybox.Lang;
 
 class SunData {
   var sinAlt = [-0.01453808, // sun
@@ -27,7 +25,6 @@ class SunData {
   }
 
   function calculate(position, refUp, refDn) {
-    Sys.println("Calc");
     if ( position == null || position[0] == null ) {
       sunRiseTime = [null, null];
       sunSetTime = [null, null];

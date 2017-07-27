@@ -1,7 +1,4 @@
 using Toybox.Graphics as Gfx;
-using Toybox.Lang as Lang;
-
-using Toybox.System as Sys;
 
 class FloorNumber extends DisplayNumber {
   var info;
