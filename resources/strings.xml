@@ -11,11 +11,11 @@
     <string id="TPhoneColour">Phone connection colour</string>
     <string id="TDNDColour">Do not disturb colour</string>
     <string id="TGPSColour">Location active colour</string>
-    <string id="TSunupColour">Sunrise icon colour</string>
-    <string id="TSundownColour">Sundown icon colour</string>
     <string id="TShowRise">Show sun rise and sun set</string>
     <string id="TSunupTime">Dawn/Rise to show for sunrise</string>
     <string id="TSundownTime">Dusk/Set to show for sundown</string>
+    <string id="TSunupColour">Sunrise icon colour</string>
+    <string id="TSundownColour">Sundown icon colour</string>
 
     <string id="Astronomical">Astronomical</string>
     <string id="Nautical">Nautical</string>

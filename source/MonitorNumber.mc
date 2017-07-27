@@ -1,5 +1,6 @@
 using Toybox.Graphics as Gfx;
 using Toybox.Lang as Lang;
+using Toybox.Application as App;
 
 class MonitorNumber extends DisplayNumber {
   var info;
