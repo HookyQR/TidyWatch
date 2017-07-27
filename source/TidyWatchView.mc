@@ -164,7 +164,6 @@ class TidyWatchView extends Ui.WatchFace {
         :max => {:font => fontXSm }
       }});
 
-
     sec = new FloorNumber(dc, {
       :font => fontLg,
       :height => minute.height(),

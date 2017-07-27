@@ -1,22 +1,25 @@
 <properties>
-    <property id="appVersion" type="string">0.1.0</property>
+    <property id="appVersion" type="string">0.1.1</property>
 
     <property id="bgColour" type="number">0x000000</property>
     <property id="nrColour" type="number">0xFFFFFF</property>
-    <property id="hrZone" type="boolean">true</property>
-    <property id="hrColour" type="number">0x00AAFF</property>
+    <property id="hrColour0" type="number">0x555555</property>
+    <property id="hrColour1" type="number">0xAAAAAA</property>
+    <property id="hrColour2" type="number">0x00AAFF</property>
+    <property id="hrColour3" type="number">0x00FF00</property>
+    <property id="hrColour4" type="number">0xFF5500</property>
+    <property id="hrColour5" type="number">0xFF0000</property>
     <property id="stepColour" type="number">0x00AAFF</property>
     <property id="batteryColour" type="number">0xAAAAAA</property>
     <property id="alarmColour" type="number">0xAA00FF</property>
     <property id="phoneColour" type="number">0x0000FF</property>
     <property id="dndColour" type="number">0x555555</property>
     <property id="gpsColour" type="number">0xFF0000</property>
+    <property id="showRise" type="boolean">true</property>
     <property id="sunupColour" type="number">0xFFAA00</property>
     <property id="sundownColour" type="number">0xFF5500</property>
     <property id="sunupTime" type="number">0</property>
     <property id="sundownTime" type="number">0</property>
-    <property id="showRise" type="boolean">true</property>
 
     <property id="sideBySide" type="boolean">false</property>
-
 </properties>

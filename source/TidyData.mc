@@ -30,25 +30,14 @@ class TidyData {
     if ( persistedLocation == null) {
       persistedLocation = [null, null];
     }
-    if ( App.getApp().getProperty("hrZone")) {
-      zoneCol = [
-        Gfx.COLOR_DK_GRAY,
-        Gfx.COLOR_LT_GRAY,
-        Gfx.COLOR_BLUE,
-        Gfx.COLOR_GREEN,
-        Gfx.COLOR_ORANGE,
-        Gfx.COLOR_RED
-      ];
-    } else {
-      zoneCol = [
-        App.getApp().getProperty("hrColour"),
-        App.getApp().getProperty("hrColour"),
-        App.getApp().getProperty("hrColour"),
-        App.getApp().getProperty("hrColour"),
-        App.getApp().getProperty("hrColour"),
-        App.getApp().getProperty("hrColour")
-      ];
-    }
+    zoneCol = [
+      App.getApp().getProperty("hrColour0"),
+      App.getApp().getProperty("hrColour1"),
+      App.getApp().getProperty("hrColour2"),
+      App.getApp().getProperty("hrColour3"),
+      App.getApp().getProperty("hrColour4"),
+      App.getApp().getProperty("hrColour5")
+    ];
   }
   function refresh(heavyLift) {
     settings = Sys.getDeviceSettings();

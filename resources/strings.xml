@@ -2,10 +2,14 @@
     <string id="AppName">TidyWatch</string>
 
     <string id="TBgColour">Background colour</string>
-    <string id="TNrColour">Colour for numbers</string>
-    <string id="THrZone">Use HR zone colours</string>
-    <string id="THrColour">HR bar colour (if not using zone colours)</string>
-    <string id="TStepColour">Step bar colour</string>
+    <string id="TNrColour">Colour for digits</string>
+    <string id="THrColour0">HR no zone colour</string>
+    <string id="THrColour1">HR warm up zone colour</string>
+    <string id="THrColour2">HR easy zone colour</string>
+    <string id="THrColour3">HR aerobic zone colour</string>
+    <string id="THrColour4">HR threshold zone colour</string>
+    <string id="THrColour5">HR maximum zone colour</string>
+    <string id="TStepColour">Steps colour</string>
     <string id="TBatteryColour">Battery outline colour</string>
     <string id="TAlarmColour">Alarm colour</string>
     <string id="TPhoneColour">Phone connection colour</string>
