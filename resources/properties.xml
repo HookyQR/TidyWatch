@@ -1,5 +1,4 @@
 <properties>
-    <property id="appVersion" type="string">0.1.1</property>
 
     <property id="bgColour" type="number">0x000000</property>
     <property id="nrColour" type="number">0xFFFFFF</property>
