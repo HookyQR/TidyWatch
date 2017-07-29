@@ -9,7 +9,7 @@ class TidyWatchView extends Ui.WatchFace {
 
   var fontXSm, fontSm, fontMed, fontLg, fontXLg;
 
-  var hour, minute, sec, row, rise, set, mainRow;
+  var hour, minute, sec, indicators, rise, set, mainRow;
   var tidyData;
   var showRise = true;
   var rebuildRequired = true;
@@ -33,7 +33,7 @@ class TidyWatchView extends Ui.WatchFace {
     fontLg = Ui.loadResource(Rez.Fonts.large);
     fontXLg = Ui.loadResource(Rez.Fonts.xlarge);
 
-    row = new Row( dc, [
+    indicators = new Row( dc, [
       new Battery(dc, {
         :char => "p", :callback => tidyData.method(:battery),
         :color => App.getApp().getProperty("batteryColour"), :font => fontMed
@@ -186,21 +186,21 @@ class TidyWatchView extends Ui.WatchFace {
     var top = (h - hour.height()) / 2;
     var pad = h < 200 ? 10 : 14;
 
-    row.center(w);
+    indicators.center(w);
     mainRow.center(w);
 
     if(App.getApp().getProperty("sideBySide")){
       top -= rise.height();
       mainRow.setTop(top + 14 - pad);
-      row.above(mainRow, pad);
+      indicators.above(mainRow, pad);
       rise.below(mainRow, pad * 2 + rise.height());
       rise.center(w);
     } else {
       mainRow.setTop(top + 14 - pad);
-      row.above(mainRow, pad);
+      indicators.above(mainRow, pad);
       rise.center(w);
       set.center(w);
-      rise.above(row, pad);
+      rise.above(indicators, pad);
       set.setTop(hour.top() + hour.fullHeight() + pad*2);
     }
   }
@@ -218,7 +218,7 @@ class TidyWatchView extends Ui.WatchFace {
 
     mainRow.draw(dc);
 
-    row.draw(dc);
+    indicators.draw(dc);
     if ( showRise ) {
       rise.draw(dc);
       if(set != null) { set.draw(dc); }
@@ -235,7 +235,7 @@ class TidyWatchView extends Ui.WatchFace {
     sec.partial(dc);
 
     switch(offset){
-      case 0: { row.partial(dc); break; }
+      case 0: { indicators.partial(dc); break; }
       case 3: { minute.partial(dc); break; }
     }
   }

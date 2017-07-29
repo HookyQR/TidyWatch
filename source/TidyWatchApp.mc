@@ -4,6 +4,7 @@ using Toybox.WatchUi as Ui;
 class TidyWatchApp extends App.AppBase {
 
     var data = new TidyData();
+    var view = null;
 
     function initialize() {
         AppBase.initialize();
@@ -19,14 +20,13 @@ class TidyWatchApp extends App.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        var view = new TidyWatchView();
+        view = new TidyWatchView();
         view.setData(data);
         return [ view ];
     }
 
-    // New app settings have been received so trigger a UI update
     function onSettingsChanged() {
-        view.clear();
+        if ( view != null ){ view.clear(); }
         Ui.requestUpdate();
     }
 }
