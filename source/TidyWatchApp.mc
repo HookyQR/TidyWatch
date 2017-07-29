@@ -21,11 +21,7 @@ class TidyWatchApp extends App.AppBase {
     function getInitialView() {
         var view = new TidyWatchView();
         view.setData(data);
-        if (Ui has :WatchFaceDelegate) {
-            return [ view, new TWDelegate() ];
-        } else {
-            return [ view ];
-        }
+        return [ view ];
     }
 
     // New app settings have been received so trigger a UI update

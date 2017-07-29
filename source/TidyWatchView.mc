@@ -164,15 +164,19 @@ class TidyWatchView extends Ui.WatchFace {
         :max => {:font => fontXSm }
       }});
 
-    sec = new FloorNumber(dc, {
-      :font => fontLg,
-      :height => minute.height(),
-      :value => tidyData.method(:floorsClimbed),
-      :max => tidyData.method(:floorsClimbedGoal),
-      :length => 2,
-      :zero => true,
-      :callback => tidyData.method(:second)
-    });
+    if ( App.getApp().getProperty("showSeconds") ){
+      sec = new FloorNumber(dc, {
+        :font => fontLg,
+        :height => minute.height(),
+        :value => tidyData.method(:floorsClimbed),
+        :max => tidyData.method(:floorsClimbedGoal),
+        :length => 2,
+        :zero => true,
+        :callback => tidyData.method(:second)
+      });
+    } else {
+      sec = new Box(dc, {:font => fontLg,:char => ""});
+    }
 
     mainRow = new Row(dc, [hour, minute, sec]);
 
@@ -234,14 +238,5 @@ class TidyWatchView extends Ui.WatchFace {
       case 0: { row.partial(dc); break; }
       case 3: { minute.partial(dc); break; }
     }
-  }
-}
-
-class TWDelegate extends Ui.WatchFaceDelegate {
-  function initialize() { Ui.WatchFaceDelegate.initialize(); }
-
-  function onPowerBudgetExceeded(powerInfo) {
-    Sys.println("TW Avg  time: " + powerInfo.executionTimeAverage);
-    Sys.println("Allowed time: " + powerInfo.executionTimeLimit);
   }
 }

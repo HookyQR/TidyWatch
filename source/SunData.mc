@@ -2,10 +2,10 @@ using Toybox.Time;
 using Toybox.Math;
 
 class SunData {
-  var sinAlt = [-0.01453808, // sun
-    -0.10452846, // civil
-    -0.20791169, // nautical
-    -0.30901699  // atstro
+  var sinAlt = [-0.01453859, // sun
+    -0.10471976, // civil
+    -0.20943951, // nautical
+    -0.31415927  // atstro
   ];
   var JUnix = 2440587.5;
   var J2k =   2451545.5;
@@ -31,13 +31,10 @@ class SunData {
       return;
     }
 
-    // position = [-41.1244/180*Math.PI, 175.0708/180*Math.PI]; // Test mock
-
     var timeInfo;
     var dateString;
     var jDate;
     var now = Time.now().value();
-    var day = Time.Gregorian.info(new Time.Moment(now), Time.FORMAT_SHORT).day;
 
     if ( pos[0] != position[0] ||
       pos[1] != position[1] ||
@@ -50,14 +47,15 @@ class SunData {
       ref[1] = refDn;
       altUp = sinAlt[refUp];
       altDn = sinAlt[refDn];
-      jDate = (now / Time.Gregorian.SECONDS_PER_DAY + JUnix - J2k - 0.0008 + pos[0]/2/Math.PI + 0.5).toLong();
+      jDate = (now / Time.Gregorian.SECONDS_PER_DAY + JUnix - J2k + pos[1]/2/Math.PI).toLong();
       sunRise = nextRise(now, jDate);
       sunSet = nextSet(now, jDate);
+
+      timeInfo = Time.Gregorian.info(new Time.Moment(sunRise), Time.FORMAT_SHORT);
+      sunRiseTime = [timeInfo.hour, timeInfo.min, timeInfo.day];
+      timeInfo = Time.Gregorian.info(new Time.Moment(sunSet), Time.FORMAT_SHORT);
+      sunSetTime = [timeInfo.hour, timeInfo.min, timeInfo.day];
     }
-    timeInfo = Time.Gregorian.info(new Time.Moment(sunRise), Time.FORMAT_SHORT);
-    sunRiseTime = [timeInfo.hour, timeInfo.min, timeInfo.day];
-    timeInfo = Time.Gregorian.info(new Time.Moment(sunSet), Time.FORMAT_SHORT);
-    sunSetTime = [timeInfo.hour, timeInfo.min, timeInfo.day];
   }
 
   function ha(alt, dec) {
@@ -66,12 +64,11 @@ class SunData {
 
   function nextRise(now, jDate) {
     var decAndMidday = decAndMid(jDate);
-    var mom = getMoment(
-      decAndMidday[1], - ha(altUp, decAndMidday[0]));
+    var mom = getMoment(decAndMidday[1], - ha(altUp, decAndMidday[0]));
 
     if (mom <= now) {
       decAndMidday = decAndMid(jDate + 1);
-      mom = getMoment(decAndMidday[1],  - ha(altUp, decAndMidday[0]));
+      mom = getMoment(decAndMidday[1], - ha(altUp, decAndMidday[0]));
     }
     return mom;
   }
@@ -97,12 +94,12 @@ class SunData {
   }
 
   function decAndMid(day) {
-    var j = day + 0.5 - pos[1] / 2 / Math.PI + 0.0001;
+    var j = day + 0.5 - pos[1] / 2 / Math.PI + 0.0008;
     var M = 6.24005997 + 0.01720197 * j;
     var C = (
       1.9148 * Math.sin(M) +
       0.0200 * Math.sin(2 * M) +
-      0.0003 * Math.sin(3 * M)) * Math.PI / 180;
+      0.0003 * Math.sin(3 * M)) * Math.PI / 180.0;
     var l = M + C + Math.PI + 1.79659306;
 
     var dec = Math.asin(Math.sin(l) * 0.39778851);

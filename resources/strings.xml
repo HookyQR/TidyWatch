@@ -3,6 +3,7 @@
 
     <string id="TBgColour">Background colour</string>
     <string id="TNrColour">Colour for digits</string>
+    <string id="TShowSeconds">Show seconds</string>
     <string id="THrColour0">HR no zone colour</string>
     <string id="THrColour1">HR warm up zone colour</string>
     <string id="THrColour2">HR easy zone colour</string>

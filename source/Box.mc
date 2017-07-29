@@ -50,6 +50,7 @@ class Box {
   }
 
   function draw(dc) { if ( value() ) { drawFinal(dc); } }
+  function partial(dc) { draw(dc); }
 
   function drawFinal(dc) {
     if( dc has :setClip) { dc.setClip(x, y+1, width(), height()); }

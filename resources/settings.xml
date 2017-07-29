@@ -35,6 +35,9 @@
       <listEntry value="0xFF00FF">@Strings.Pink</listEntry>
     </settingConfig>
   </setting>
+  <setting propertyKey="@Properties.showSeconds" title="@Strings.TShowSeconds">
+    <settingConfig type="boolean" />
+  </setting>
   <setting propertyKey="@Properties.hrColour0" title="@Strings.THrColour0">
     <settingConfig type="list">
       <listEntry value="0xFFFFFF">@Strings.White</listEntry>

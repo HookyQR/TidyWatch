@@ -78,7 +78,7 @@ class MonitorNumber extends DisplayNumber {
     r = height() * (r - a + bottomV()) / r;
     // hold back the little bit at the top until it's really full
     // never < 0, r if 1+, otherwise, only zero if it's really full
-    return r < 0 ? 0 : r > 0 ? r : a == t ? 0 : 1;
+    return r < 0 ? 0 : r > 0 ? r : a >= t ? 0 : 1;
   }
   function fullHeight() {
     return height() + info.height() + 4;
