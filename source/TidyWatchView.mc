@@ -13,8 +13,11 @@ class TidyWatchView extends Ui.WatchFace {
   var tidyData;
   var showRise = true;
   var rebuildRequired = true;
-  function clear()       { rebuildRequired = true; }
-  function initialize()  { WatchFace.initialize(); }
+  function clear() {
+    rebuildRequired = true;
+    Ui.requestUpdate();
+  }
+  function initialize()  { Ui.WatchFace.initialize(); }
   function setData(data) { tidyData = data; }
 
   function onLayout(dc) {

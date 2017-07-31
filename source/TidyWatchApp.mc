@@ -7,7 +7,7 @@ class TidyWatchApp extends App.AppBase {
     var view = null;
 
     function initialize() {
-        AppBase.initialize();
+        App.AppBase.initialize();
     }
 
     // onStart() is called on application start up
@@ -27,6 +27,5 @@ class TidyWatchApp extends App.AppBase {
 
     function onSettingsChanged() {
         if ( view != null ){ view.clear(); }
-        Ui.requestUpdate();
     }
 }

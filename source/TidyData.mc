@@ -3,7 +3,7 @@ using Toybox.ActivityMonitor as ActMon;
 using Toybox.Activity as Act;
 using Toybox.UserProfile as UP;
 using Toybox.Graphics as Gfx;
-using Toybox.Time;
+using Toybox.Time as Time;
 using Toybox.Application as App;
 
 class TidyData {
@@ -61,7 +61,7 @@ class TidyData {
 
     sunData.calculate(persistedLocation, App.getApp().getProperty("sunupTime"), App.getApp().getProperty("sundownTime"));
 
-    if(ActMon has: getHeartRateHistory) {
+    if(ActMon has :getHeartRateHistory) {
       try {
         var ittr = ActMon.getHeartRateHistory(new Time.Duration(4 * 60 * 60), true);
         var first = ittr.next();
@@ -70,7 +70,9 @@ class TidyData {
         } else {
           hr = [ittr.getMin(), ittr.getMax(), null];
         }
-      } catch (e) { } // not worried if it doesn't work
+      } catch (e) {
+        e.printStackTrace();
+       }
     }
   }
 

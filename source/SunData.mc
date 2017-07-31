@@ -26,13 +26,12 @@ class SunData {
 
   function calculate(position, refUp, refDn) {
     if ( position == null || position[0] == null ) {
-      sunRiseTime = [null, null];
-      sunSetTime = [null, null];
+      sunRiseTime = [null, null, 0];
+      sunSetTime = [null, null, 0];
       return;
     }
 
     var timeInfo;
-    var dateString;
     var jDate;
     var now = Time.now().value();
 
@@ -65,9 +64,10 @@ class SunData {
   function nextRise(now, jDate) {
     var decAndMidday = decAndMid(jDate);
     var mom = getMoment(decAndMidday[1], - ha(altUp, decAndMidday[0]));
-
-    if (mom <= now) {
-      decAndMidday = decAndMid(jDate + 1);
+    var os = 1;
+    while (mom <= now) {
+      decAndMidday = decAndMid(jDate + os);
+      os += 1;
       mom = getMoment(decAndMidday[1], - ha(altUp, decAndMidday[0]));
     }
     return mom;
@@ -76,10 +76,10 @@ class SunData {
   function nextSet(now, jDate) {
     var decAndMidday = decAndMid(jDate);
     var mom = getMoment(decAndMidday[1], ha(altDn, decAndMidday[0]));
-
-    if (mom < now) {
-      decAndMidday = decAndMid(jDate + 1);
-
+    var os = 1;
+    while (mom < now) {
+      decAndMidday = decAndMid(jDate + os);
+      os += 1;
       mom = getMoment(decAndMidday[1], ha(altDn, decAndMidday[0]));
     }
     return mom;
