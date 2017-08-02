@@ -27,6 +27,7 @@ class TidyData {
 
   function updateSettings() {
     persistedLocation = App.getApp().getProperty("location");
+
     if ( persistedLocation == null) {
       persistedLocation = [null, null];
     }
@@ -39,12 +40,17 @@ class TidyData {
       App.getApp().getProperty("hrColour5")
     ];
   }
+
   function refresh(heavyLift) {
     settings = Sys.getDeviceSettings();
     stats = Sys.getSystemStats();
     info = ActMon.getInfo();
     var ai = Act.getActivityInfo();
+    var ittr = null;
+    var first;
+
     loc = ai ? ai.currentLocation : null;
+
     if ( loc != null &&
         loc.toRadians()[0] != null &&
       (loc.toRadians()[0] != persistedLocation[0] || loc.toRadians()[1] != persistedLocation[1])) {
@@ -63,16 +69,27 @@ class TidyData {
 
     if(ActMon has :getHeartRateHistory) {
       try {
-        var ittr = ActMon.getHeartRateHistory(new Time.Duration(4 * 60 * 60), true);
-        var first = ittr.next();
-        if ((first != null) && (first.heartRate != 255)) {
-          hr = [ittr.getMin(), ittr.getMax(), first.heartRate];
-        } else {
-          hr = [ittr.getMin(), ittr.getMax(), null];
-        }
+        ittr = ActMon.getHeartRateHistory(new Time.Duration(4 * 60 * 60), true);
       } catch (e) {
-        e.printStackTrace();
-       }
+        // FR 235 doesn't like ghrHistory with a duration
+        try {
+          ittr = ActMon.getHeartRateHistory(180, true); // 81 seconds between updates ... maybe?
+        } catch (ee) { }
+      }
+      if ( ittr == null ) { return; } // bums
+
+      first = ittr.next();
+      var min = ittr.getMin();
+      var max = ittr.getMax();
+      var curHr = null;
+      if ((first != null) && (first.heartRate != 255)) {
+        curHr = first.heartRate;
+      }
+      hr = [
+        min != 255 ? min : null,
+        max != 255 ? max : null,
+        curHr
+      ];
     }
   }
 
