@@ -76,9 +76,12 @@ class MonitorNumber extends DisplayNumber {
     var r = t - bottomV();
     r = r <= 0 ? 1 : r;
     r = height() * (r - a + bottomV()) / r;
-    // hold back the little bit at the top until it's really full
-    // never < 0, r if 1+, otherwise, only zero if it's really full
-    return r < 0 ? 0 : r > 0 ? r : a >= t ? 0 : 1;
+
+    if ( r > height() ) { return height(); }
+    if ( r > 0 ) { return r; }
+    if ( r < 0 ) { return 0; }
+    if ( a >= t ) { return 0; }
+    return 1; // don't give up that last little bit
   }
   function fullHeight() {
     return height() + info.height() + 4;
@@ -117,6 +120,5 @@ class MonitorNumber extends DisplayNumber {
     prevPos = p;
     dc.setColor(fg, bg);
     dc.drawText(x, y, font, format(value()), Gfx.TEXT_JUSTIFY_LEFT);
-
   }
 }
