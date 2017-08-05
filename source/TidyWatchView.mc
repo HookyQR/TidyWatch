@@ -7,7 +7,7 @@ using Toybox.UserProfile as UP;
 
 class TidyWatchView extends Ui.WatchFace {
 
-  var fontXSm, fontSm, fontMed, fontLg, fontXLg;
+  var fontXSm, fontSm, fontMed, fontLg, fontXLg, fontInv;
 
   var hour, minute, sec, indicators, rise, set, mainRow;
   var tidyData;
@@ -30,16 +30,27 @@ class TidyWatchView extends Ui.WatchFace {
     showRise = App.getApp().getProperty("showRise");
     tidyData.updateSettings();
 
+    fontInv = Ui.loadResource(Rez.Fonts.xsmalli);
     fontXSm = Ui.loadResource(Rez.Fonts.xsmall);
     fontSm = Ui.loadResource(Rez.Fonts.small);
     fontMed = Ui.loadResource(Rez.Fonts.medium);
     fontLg = Ui.loadResource(Rez.Fonts.large);
     fontXLg = Ui.loadResource(Rez.Fonts.xlarge);
 
+
+    var h = dc.getHeight();
+    var w = dc.getWidth();
+    var month = new DisplayNumber(dc, {
+        :callback => tidyData.method(:mday),
+        :font => fontMed, :length => 2, :zero => false
+      });
+    month.setAlign(Gfx.TEXT_JUSTIFY_LEFT);
     indicators = new Row( dc, [
       new Battery(dc, {
         :char => "p", :callback => tidyData.method(:battery),
-        :color => App.getApp().getProperty("batteryColour"), :font => fontMed
+        :color => App.getApp().getProperty("batteryColour"), :font => fontMed,
+        :innerFont => App.getApp().getProperty("batteryNumber") ? fontInv : null,
+        :innerColour => App.getApp().getProperty("batteryColour")
       }),
       new Box(dc, {
         :char => "s", :callback => tidyData.method(:dnd),
@@ -53,41 +64,50 @@ class TidyWatchView extends Ui.WatchFace {
         :char => "a", :callback => tidyData.method(:alarm),
         :color => App.getApp().getProperty("alarmColour"), :font => fontMed
       }),
+      new Message(dc, {
+        :char => "m", :callback => tidyData.method(:messages),
+        :color => App.getApp().getProperty("messageColour"), :font => fontMed,
+        :innerFont => fontInv,
+        :innerColour => App.getApp().getProperty("messageColour")
+      }),
       new Box(dc, {
         :char => "g", :callback => tidyData.method(:gps),
         :color => App.getApp().getProperty("gpsColour"), :font => fontMed
       }),
       new Box(dc, {
-        :char => "!", :callback => tidyData.method(:always),
+        :char => "!",
         :color => Gfx.COLOR_TRANSPARENT, :font => fontMed
       }),
-      new DisplayNumber(dc, {
-        :callback => tidyData.method(:mday),
-        :font => fontSm, :length => 2, :zero => false
-      })
-    ]);
+      month
+    ], {});
 
     if(App.getApp().getProperty("sideBySide")){
       rise = new Row( dc, [
         new Box(dc, {
-          :char => "u!", :callback => tidyData.method(:riseHour),
-          :color => App.getApp().getProperty("sunupColour"), :font => fontSm
+          :char => "u!", :color => App.getApp().getProperty("sunupColour"), :font => fontSm
         }),
         new DisplayNumber(dc, {
           :callback => tidyData.method(:riseHour),
-          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+          :font => fontSm, :length => 2, :zero => tidyData.is24Hour()
+        }),
+        new Box(dc, {
+          :char => ":", :callback => tidyData.method(:is12Hour),
+          :font => fontSm
         }),
         new DisplayNumber(dc, {
           :callback => tidyData.method(:riseMin),
           :font => fontSm, :length => 2, :zero => true
         }),
         new Box(dc, {
-          :char => "  ", :callback => tidyData.method(:always),
-          :color => App.getApp().getProperty("sunupColour"), :font => fontSm
+          :char => "!!!!!!!!!!", :font => fontSm
         }),
         new DisplayNumber(dc, {
           :callback => tidyData.method(:setHour),
-          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+          :font => fontSm, :length => 2, :zero => tidyData.is24Hour()
+        }),
+        new Box(dc, {
+          :char => ":", :callback => tidyData.method(:is12Hour),
+          :font => fontSm
         }),
         new DisplayNumber(dc, {
           :callback => tidyData.method(:setMin),
@@ -97,13 +117,17 @@ class TidyWatchView extends Ui.WatchFace {
           :char => "!d", :callback => tidyData.method(:setHour),
           :color => App.getApp().getProperty("sundownColour"), :font => fontSm
         })
-      ]);
+      ], { :callback => tidyData.method(:setHour) });
       set = null;
     } else {
       rise = new Row( dc, [
         new DisplayNumber(dc, {
           :callback => tidyData.method(:riseHour),
-          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+          :font => fontSm, :length => 2, :zero => tidyData.is24Hour()
+        }),
+        new Box(dc, {
+          :char => ":", :callback => tidyData.method(:is12Hour),
+          :font => fontSm
         }),
         new DisplayNumber(dc, {
           :callback => tidyData.method(:riseMin),
@@ -113,12 +137,16 @@ class TidyWatchView extends Ui.WatchFace {
           :char => "!u", :callback => tidyData.method(:riseHour),
           :color => App.getApp().getProperty("sunupColour"), :font => fontSm
         })
-      ]);
+      ], { :callback => tidyData.method(:riseHour) });
 
       set = new Row( dc, [
         new DisplayNumber(dc, {
           :callback => tidyData.method(:setHour),
-          :font => fontSm, :length => 2, :zero => tidyData.settings.is24Hour
+          :font => fontSm, :length => 2, :zero => tidyData.is24Hour()
+        }),
+        new Box(dc, {
+          :char => ":", :callback => tidyData.method(:is12Hour),
+          :font => fontSm
         }),
         new DisplayNumber(dc, {
           :callback => tidyData.method(:setMin),
@@ -128,19 +156,21 @@ class TidyWatchView extends Ui.WatchFace {
           :char => "!d", :callback => tidyData.method(:setHour),
           :color => App.getApp().getProperty("sundownColour"), :font => fontSm
         })
-      ]);
+      ], { :callback => tidyData.method(:setHour) });
     }
+    var p = (tidyData.is12Hour()) ? Gfx.TEXT_JUSTIFY_RIGHT : Gfx.TEXT_JUSTIFY_CENTER;
+
     hour = new MonitorNumber(dc, {
       :font => fontXLg,
       :length => 2,
-      :zero => tidyData.settings.is24Hour,
+      :zero => tidyData.is24Hour(),
       :callback => tidyData.method(:hour),
       :topColor => App.getApp().getProperty("nrColour"),
       :bottomColor => tidyData.method(:zoneColor),
       :value => tidyData.method(:hrActual),
       :min => tidyData.method(:hrMin),
       :max => tidyData.method(:hrMax),
-      :position => Gfx.TEXT_JUSTIFY_CENTER,
+      :position => p,
       :info => {
         :font => fontSm,
         :length => 3,
@@ -180,18 +210,22 @@ class TidyWatchView extends Ui.WatchFace {
     } else {
       sec = new Box(dc, {:font => fontLg,:char => ""});
     }
-
-    mainRow = new Row(dc, [hour, minute, sec]);
-
-    var h = dc.getHeight();
-    var w = dc.getWidth();
-
+    var colon = new Box(dc, {
+          :char => ":", :callback => tidyData.method(:is12Hour), :font => fontXLg
+        });
+    mainRow = new Row(dc, [hour,
+    colon,
+    minute,
+    sec], {});
     var top = (h - hour.height()) / 2;
     var pad = h < 200 ? 10 : 14;
 
     indicators.center(w);
     mainRow.center(w);
 
+    if ( tidyData.is12Hour() ){
+      mainRow.setLeft(mainRow.left() - colon.width() + 2);
+    }
     if(App.getApp().getProperty("sideBySide")){
       top -= rise.height();
       mainRow.setTop(top + 14 - pad);

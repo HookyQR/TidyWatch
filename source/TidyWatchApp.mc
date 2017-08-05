@@ -3,7 +3,7 @@ using Toybox.WatchUi as Ui;
 
 class TidyWatchApp extends App.AppBase {
 
-    var data = new TidyData();
+    var data = null;//new TidyData();
     var view = null;
 
     function initialize() {
@@ -20,6 +20,7 @@ class TidyWatchApp extends App.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
+        data = new TidyData();
         view = new TidyWatchView();
         view.setData(data);
         return [ view ];

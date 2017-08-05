@@ -1,8 +1,9 @@
 <resources>
     <fonts>
+        <font id="xsmalli" filename="../resources/font/hooky_1.5i.fnt"  antialias="true" />
         <font id="xsmall" filename="../resources/font/hooky_1.5.fnt"  antialias="true" />
-        <font id="small" filename="../resources/font/hooky_2.fnt"  antialias="true" filter="1234567890ud! " />
-        <font id="medium" filename="../resources/font/hooky_3.fnt"  antialias="true" filter="absgp!" />
+        <font id="small" filename="../resources/font/hooky_2.fnt"  antialias="true" filter="1234567890:ud! " />
+        <font id="medium" filename="../resources/font/hooky_3.fnt"  antialias="true" />
         <font id="large" filename="../resources/font/hooky_5.fnt"  antialias="true" />
         <font id="xlarge" filename="../resources/font/hooky_8.fnt"  antialias="true" />
     </fonts>

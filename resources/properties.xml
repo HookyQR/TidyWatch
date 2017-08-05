@@ -11,9 +11,11 @@
     <property id="hrColour5" type="number">0xFF0000</property>
     <property id="stepColour" type="number">0x00AAFF</property>
     <property id="batteryColour" type="number">0xAAAAAA</property>
+    <property id="batteryNumber" type="boolean">true</property>
     <property id="alarmColour" type="number">0xAA00FF</property>
     <property id="phoneColour" type="number">0x0000FF</property>
     <property id="dndColour" type="number">0x555555</property>
+    <property id="messageColour" type="number">0x00AA00</property>
     <property id="gpsColour" type="number">0xFF0000</property>
     <property id="showRise" type="boolean">true</property>
     <property id="sunupColour" type="number">0xFFAA00</property>

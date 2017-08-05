@@ -10,12 +10,12 @@ class Box {
   var state = true;
 
   function initialize(dc, options) {
-    fg = App.getApp().getProperty("bgColour");
+    bg = App.getApp().getProperty("bgColour");
     font = options[:font];
     op = options[:char] ? options[:char] : "!";
     dim = dc.getTextDimensions(op, font);
     cb = options[:callback];
-    bg = options[:color] ? options[:color] : Gfx.COLOR_WHITE;
+    fg = options[:color] != null ? options[:color] : App.getApp().getProperty("nrColour");
   }
   function width() {
     if ( state == null || state == false) { return 0; }
@@ -23,7 +23,7 @@ class Box {
   }
   function changed() {
     var preState = state;
-    state = null;
+    state = true;
     if ( cb != null) { state = cb.invoke(); }
     return preState == state;
   }
@@ -49,7 +49,7 @@ class Box {
     return self;
   }
 
-  function draw(dc) { if ( value() ) { drawFinal(dc); } }
+  function draw(dc) { if ( value()) { drawFinal(dc); } }
   function partial(dc) { draw(dc); }
 
   function drawFinal(dc) {

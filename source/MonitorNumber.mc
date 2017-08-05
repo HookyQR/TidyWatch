@@ -15,10 +15,10 @@ class MonitorNumber extends DisplayNumber {
   function initialize(dc, options) {
     DisplayNumber.initialize(dc, options);
     setBG(Gfx.COLOR_TRANSPARENT);
-    mainColor = options[:topColor] ? options[:topColor] : App.getApp().getProperty("nrColour");
-    fillColor = options[:bottomColor] ? options[:bottomColor] : App.getApp().getProperty("nrColour");
+    mainColor = options[:topColor] != null ? options[:topColor] : App.getApp().getProperty("nrColour");
+    fillColor = options[:bottomColor] != null ? options[:bottomColor] : App.getApp().getProperty("nrColour");
 
-    position = options[:position] ? options[:position] : Gfx.TEXT_JUSTIFY_CENTER;
+    position = options[:position] != null ? options[:position] : Gfx.TEXT_JUSTIFY_CENTER;
     topCB = options[:max];
     bottomCB = options[:min];
     actualCB = options[:value];
@@ -59,6 +59,8 @@ class MonitorNumber extends DisplayNumber {
     DisplayNumber.setLeft(l);
     if ( position == Gfx.TEXT_JUSTIFY_CENTER) {
       info.center(self);
+    } else if (position == Gfx.TEXT_JUSTIFY_RIGHT) {
+      info.setRight(right());
     } else {
       info.setLeft(left());
     }

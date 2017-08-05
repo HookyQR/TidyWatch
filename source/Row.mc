@@ -5,7 +5,9 @@ class Row {
   var fg = App.getApp().getProperty("bgColour");
   var dim = [0,0];
   var x, y;
-  function initialize(dc, elements) {
+  var show;
+  function initialize(dc, elements, options) {
+    show = options[:callback];
     elem = elements;
     var w = 0;
     var h = 0;
@@ -44,6 +46,7 @@ class Row {
   function top() { return y; }
 
   function doDraw(dc, partial) {
+    if (show != null && show.invoke() == null) { return; }
     var w = 0;
     var good = 0;
     var i;

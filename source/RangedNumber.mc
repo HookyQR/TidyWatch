@@ -58,6 +58,9 @@ class RangedNumber extends DisplayNumber {
   function center(other) {
     return setLeft((other.left() + other.right() - width()) / 2);
   }
+  function setRight(p) {
+    return setLeft(p - width());
+  }
 
   function setFG(col) {
     DisplayNumber.setFG(col);

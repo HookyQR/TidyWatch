@@ -72,9 +72,9 @@ class TidyData {
         ittr = ActMon.getHeartRateHistory(new Time.Duration(4 * 60 * 60), true);
       } catch (e) {
         // FR 235 doesn't like ghrHistory with a duration
-        try {
-          ittr = ActMon.getHeartRateHistory(180, true); // 81 seconds between updates ... maybe?
-        } catch (ee) { }
+        // try {
+        //   ittr = ActMon.getHeartRateHistory(180, true); // 81 seconds between updates ... maybe?
+        // } catch (ee) { }
       }
       if ( ittr == null ) { return; } // bums
 
@@ -93,7 +93,6 @@ class TidyData {
     }
   }
 
-  function always() { return true; }
   function zoneColor(nr) {
     if ( nr == null)    { return zoneCol[0]; }
     if( nr <= zones[0]) { return zoneCol[0]; }
@@ -107,13 +106,14 @@ class TidyData {
   function floorsClimbedGoal() { return info == null ? null : ((info has :floorsClimbedGoal) ? info.floorsClimbedGoal : 1); }
 
 /* Mock values * /
+  function messages() { return 3; }
   function phone() { return true; }
   function alarm() { return settings.alarmCount != null && settings.alarmCount > 0; }
   function dnd() { return (settings has :doNotDisturb); }
-  function battery() { return 80.0; }
+  function battery() { return 47.0; }
   function gps() { return loc; }
 
-  function mday() { return date; }
+  function mday() { return 30; }
 
   function riseHour() { return 6; }
   function riseMin() { return 7; }
@@ -126,9 +126,10 @@ class TidyData {
   function hrActual() { return hr[2] ? 136 : null; }
   function minute() {return 34;}
   function second() { return 56;}
-  function hour() { return 12; }
-/*/
+  function hour() { return hourFmt(21); }
 
+/*/
+  function messages() { return settings.notificationCount; }
   function phone() { return settings.phoneConnected; }
   function alarm() { return settings.alarmCount != null && settings.alarmCount > 0; }
   function dnd() { return (settings has :doNotDisturb) ? settings.doNotDisturb : false; }
@@ -155,6 +156,9 @@ class TidyData {
   function second() { return clockTime.sec; }
   function hour() { return hourFmt(clockTime.hour); }
   /**/
+
+  function is24Hour() { return settings.is24Hour; }
+  function is12Hour() { return !settings.is24Hour; }
 
   function hourFmt( h ) {
     if ( h == null) { return null; }

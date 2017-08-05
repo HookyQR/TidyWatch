@@ -7,21 +7,25 @@ const path = require('path');
 const cp = require('child_process');
 
 const setup = [
-  { height: 56, blockWidth: 8,  chars: "0123456789" },
-  { height: 49, blockWidth: 7,  chars: "0123456789" },
-  { height: 42, blockWidth: 6,  chars: "0123456789" },
-  { height: 35, blockWidth: 5,  chars: "0123456789" },
-  { height: 28, blockWidth: 4,  chars: "0123456789" },
-  { height: 21, blockWidth: 3,  chars: "0123456789absgdup" },
-  { height: 14, blockWidth: 2,  chars: "0123456789absgdup" },
-  { height: 9,  blockWidth:1.5, chars: "0123456789" },
-  { height: 7,  blockWidth: 1,  chars: "0123456789" },
+  { height: 56, blockWidth: 8,  chars: "0123456789:! " },
+  { height: 49, blockWidth: 7,  chars: "0123456789:! " },
+  { height: 42, blockWidth: 6,  chars: "0123456789:! " },
+  { height: 35, blockWidth: 5,  chars: "0123456789:! " },
+  { height: 28, blockWidth: 4,  chars: "0123456789:! " },
+  { height: 21, blockWidth: 3,  chars: "0123456789:absgdupm! " },
+  { height: 14, blockWidth: 2,  chars: "0123456789:absgdupm! " },
+  { height: 9,  blockWidth:1.5, chars: "0123456789:! " },
+  { height: 7,  blockWidth: 1,  chars: "0123456789:! " },
+  { height: 9,  blockWidth:1.5, chars: "0123456789 ", inverted: true },
+  { height: 7,  blockWidth: 1,  chars: "0123456789 ", inverted: true },
 ];
 
 const refWidth = {
-  5: '1234567890',
+  1: ':!',
+  5: '1234567890 ',
   6: 'bsg',
   7: 'a',
+  8: 'm',
   9: 'p',
   10: 'ud'
 };
@@ -34,7 +38,7 @@ const root = ['.', 'resources', 'font'];
 
 let osY = 0;
 setup.forEach(setting => {
-  const fName = path.join.apply(path, root.concat(`hooky_${setting.blockWidth}.fnt`));
+  const fName = path.join.apply(path, root.concat(`hooky_${setting.blockWidth}${setting.inverted? 'i':''}.fnt`));
   const out = fs.createWriteStream(fName);
   out.write(`common lineHeight=${setting.height} base=${setting.height} pages=1
 page id=0 file="hooky.png"
@@ -50,8 +54,6 @@ chars count=${setting.chars.length+2}
       osX += setting.blockWidth * charRef[c] | 0;
       return l;
     });
-    lines.push(`char id=32 x=400 y=200 width=${setting.blockWidth*5|0} height=${setting.height} xoffset=0 yoffset=0 xadvance=${setting.blockWidth*5|0} page=0 chnl=1`);
-    lines.push(`char id=33 x=400 y=200 width=${setting.blockWidth|0} height=${setting.height} xoffset=0 yoffset=0 xadvance=${setting.blockWidth|0} page=0 chnl=1`);
     lines.push("");
     out.end(lines.join("\r\n"));
     osY += setting.height;
