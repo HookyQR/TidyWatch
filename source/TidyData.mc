@@ -41,6 +41,20 @@ class TidyData {
     ];
   }
 
+  function hrDuration() {
+    try {
+      return ActMon.getHeartRateHistory(new Time.Duration(4 * 60 * 60), true);
+    } catch (e) {
+      return null;
+    }
+  }
+  function hrCount() {
+    try {
+      return ActMon.getHeartRateHistory(180, true); // 81 seconds between updates ... maybe?
+    } catch (e) {
+      return null;
+    }
+  }
   function refresh(heavyLift) {
     settings = Sys.getDeviceSettings();
     stats = Sys.getSystemStats();
@@ -68,13 +82,9 @@ class TidyData {
     sunData.calculate(persistedLocation, App.getApp().getProperty("sunupTime"), App.getApp().getProperty("sundownTime"));
 
     if(ActMon has :getHeartRateHistory) {
-      try {
-        ittr = ActMon.getHeartRateHistory(new Time.Duration(4 * 60 * 60), true);
-      } catch (e) {
-        // FR 235 doesn't like ghrHistory with a duration
-        // try {
-        //   ittr = ActMon.getHeartRateHistory(180, true); // 81 seconds between updates ... maybe?
-        // } catch (ee) { }
+      ittr = hrDuration();
+      if (ittr == null ) {
+        ittr = hrCount();
       }
       if ( ittr == null ) { return; } // bums
 
