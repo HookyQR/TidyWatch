@@ -15,7 +15,7 @@
             <iq:product id="fenix5s"/>
             <iq:product id="fenixchronos"/>
             <iq:product id="fenix5"/>
-            <iq:product id="fenix5x"/>
+            <!-- <iq:product id="fenix5x"/>  doesn't work, waiting on feedback from garmin -->
             <iq:product id="vivoactive"/>
             <iq:product id="fr935"/>
             <iq:product id="approachs60"/>
