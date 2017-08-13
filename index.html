@@ -10,13 +10,14 @@
         url("Hooky.woff");
     }
     body {
-      font-family: hooky;
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       vertical-align: top;
       background-color: black;
+      color: white;
       width: 100%;
+      font-family: Tahoma, Geneva, Verdana, sans-serif;
     }
     #sec {
       display: inline-block;
@@ -41,6 +42,7 @@
     }
 
     #main {
+      font-family: hooky;
       box-sizing:border-box;
       border: 1px solid white;
       margin: 5px;
@@ -111,10 +113,11 @@
       background-color: white !important;
     }
     #result {
-      margin: 1em;
+      margin: 0.5em;
       border-radius: 2px;
       background-color: white;
-      font-family: "Courier New", Courier, monospace;
+      color: black;
+      font-family: 'Courier New', Courier, monospace;
       padding: 5px;
     }
     .info>span{ padding-right: 4px;}
@@ -156,6 +159,8 @@
 </head>
 
 <body>
+  <div style="padding: 1em">Using the colour settings code generated here will override all other colour settings in Garmin Connect or Garmin Express.
+    <br>Copy the generated code below into the "Colours shortcut" field. To return to using the standard settings method, clear the "Colours shortcut" field.</div>
   <div id="nav">
   </div>
   <div id="show">
@@ -177,12 +182,13 @@
       <span id="stepval" class="b subord">9874</span>
     </div>
     <div class="c">
-      <span class="nr">34</span>
+      <span class="nr">56</span>
     </div>
     </div>
     <div class="a"></div>
     <div class="nr">1758 <span class="ss">d</span></div>
   </div>
+  <div style="color: white; text-align: left; padding-left: 1em">Code:</div>
   <div id="result"></div>
   <script>
     var selected = {

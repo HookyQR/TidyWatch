@@ -1,4 +1,7 @@
 <settings>
+  <setting propertyKey="@Properties.colourString" title="@Strings.TColourString" prompt="@Strings.TColourURL">
+    <settingConfig type="alphaNumeric" />
+  </setting>
   <setting propertyKey="@Properties.bgColour" title="@Strings.TBgColour">
     <settingConfig type="list">
       <listEntry value="0xFFFFFF">@Strings.White</listEntry>

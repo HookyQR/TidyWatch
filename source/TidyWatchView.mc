@@ -26,7 +26,49 @@ class TidyWatchView extends Ui.WatchFace {
     rebuildRequired = false;
   }
 
+  function colourFromIndex(idx) {
+    return [
+      0x000000,0x000055,0x0000aa,0x0000ff,0x005500,0x005555,0x0055aa,0x0055ff,
+      0x550000,0x550055,0x5500aa,0x5500ff,0x555500,0x555555,0x5555aa,0x5555ff,
+      0xaa0000,0xaa0055,0xaa00aa,0xaa00ff,0xaa5500,0xaa5555,0xaa55aa,0xaa55ff,
+      0xff0000,0xff0055,0xff00aa,0xff00ff,0xff5500,0xff5555,0xff55aa,0xff55ff,
+      0x00aa00,0x00aa55,0x00aaaa,0x00aaff,0x00ff00,0x00ff55,0x00ffaa,0x00ffff,
+      0x55aa00,0x55aa55,0x55aaaa,0x55aaff,0x55ff00,0x55ff55,0x55ffaa,0x55ffff,
+      0xaaaa00,0xaaaa55,0xaaaaaa,0xaaaaff,0xaaff00,0xaaff55,0xaaffaa,0xaaffff,
+      0xffaa00,0xffaa55,0xffaaaa,0xffaaff,0xffff00,0xffff55,0xffffaa,0xffffff
+    ][idx];
+  }
+
+  function setPropertiesFromString(str) {
+    var b32 = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
+    var bits = str.toCharArray();
+    var props = [
+    "bgColour","nrColour",
+    "hrColour0","hrColour1",
+    "hrColour2","hrColour3",
+    "hrColour4","hrColour5",
+    "stepColour","batteryColour",
+    "alarmColour","phoneColour",
+    "dndColour","messageColour",
+    "gpsColour","sunupColour",
+    "sundownColour"
+    ];
+    var i = 0;
+    var j = 0;
+    for(i=0;i<props.size() && j < bits.size();i++, j++){
+      var os = 0;
+      if ( bits[j] == 'a') {
+        j++;
+        os = 32;
+      }
+      App.getApp().setProperty(props[i], colourFromIndex(os + b32.find(bits[j].toString())));
+    }
+  }
   function build(dc){
+    if( App.getApp().getProperty("colourString").length() > 0){
+      setPropertiesFromString(App.getApp().getProperty("colourString"));
+    }
+
     showRise = App.getApp().getProperty("showRise");
     tidyData.updateSettings();
 

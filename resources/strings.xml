@@ -1,6 +1,8 @@
 <strings>
     <string id="AppName">TidyWatch</string>
 
+    <string id="TColourString">Colours shortcut</string>
+    <string id="TColourURL">Visit https://hookyqr.github.io/TidyWatch/</string>
     <string id="TBgColour">Background colour</string>
     <string id="TNrColour">Colour for digits</string>
     <string id="TShowSeconds">Show seconds</string>

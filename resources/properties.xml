@@ -1,5 +1,5 @@
 <properties>
-
+    <property id="colourString" type="string"></property>
     <property id="bgColour" type="number">0x000000</property>
     <property id="nrColour" type="number">0xFFFFFF</property>
     <property id="showSeconds" type="boolean">true</property>
