@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TidyWatch colour sets</title>
+  <style>
+    @font-face {
+      font-family: hooky;
+      src: url("Hooky.ttf"),
+        url("Hooky.woff");
+    }
+    body {
+      font-family: hooky;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      vertical-align: top;
+      background-color: black;
+      width: 100%;
+    }
+    #sec {
+      display: inline-block;
+      vertical-align: 80%;
+    }
+    #nav {
+      display: inline-block;
+      max-width: 20em;
+      padding: 3px;
+    }
+    #show {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+    }
+    #col {
+      display:block;
+      margin: 3px;
+      padding: 3px;
+      width: 250px;
+      text-align: center;
+    }
+
+    #main {
+      box-sizing:border-box;
+      border: 1px solid white;
+      margin: 5px;
+      width: 240px;
+      height: 240px;
+      color: white;
+      border-radius: 50%;
+      padding-top: 20px;
+      font-size: 1.4em;
+      opacity: 0.8;
+    }
+    #main * {
+      padding-top: initial;
+      padding-bottom: 0.2em;
+    }
+    #main>div {
+      text-align: center;
+      padding-top: 10px;
+    }
+    #main>div>div {
+      display: inline-block;
+    }
+    button {
+      display: block;
+      width: 100%;
+      border: 2px solid grey;
+      border-radius: 4px;
+      padding: 0.5em;
+      margin: 3px;
+    }
+
+    #col>button {
+      border-radius: 0;
+      opacity: 0.8;
+      border: none;
+      width: 28px;
+      height: 28px;
+      margin: 0.5px;
+      padding: 0;
+      content: " ";
+      display: inline-block;
+      vertical-align: text-top;
+    }
+
+    .subord {
+      display: inline-block;
+      text-align: right;
+    }
+    .a, .b {
+      vertical-align: middle;
+    }
+    .b {
+      font-size: 1em;
+    }
+    .a {
+      font-size: 0.6em;
+      line-height: 0.7em;
+    }
+    .c {
+      font-size: 2.5em;
+      vertical-align: top;
+    }
+    .d {
+      font-size: 4em;
+      padding-bottom: 10px !important;
+    }
+    .sel {
+      background-color: white !important;
+    }
+    #result {
+      margin: 1em;
+      border-radius: 2px;
+      background-color: white;
+      font-family: "Courier New", Courier, monospace;
+      padding: 5px;
+    }
+    .info>span{ padding-right: 4px;}
+    .bk { background-color: #000; }
+    .nr { color: #fff; }
+    .hr { color: #f50; }
+    .step { color: #0af; }
+    .btt { color: #aaa; }
+    .alr { color: #a0f; }
+    .ph { color: #00f; }
+    .dnd { color: #555; }
+    .msg { color: #0a0; }
+    .loc { color: #f00; }
+    .sr { color: #fa0; }
+    .ss { color: #f50; }
+  </style>
+  <script>
+    var elements = {
+      Background: ['.bk', 0],
+      Numbers: ['.nr', 63],
+      'HR no zone': ['.hr', 13],
+      'HR warm up zone': ['.hr', 50],
+      'HR easy zone': ['.hr', 35],
+      'HR aerobic zone': ['.hr', 36],
+      'HR threshold zone': ['.hr', 28],
+      'HR maximum zone': ['.hr', 24],
+      Steps: ['.step', 35],
+      'Battery outline': ['.btt', 50],
+      Alarm: ['.alr', 19],
+      'Phone connnection': ['.ph', 3],
+      'Do not disturb': ['.dnd', 13],
+      'Message indicator': ['.msg', 32],
+      'Location active': ['.loc', 24],
+      'Sunrise icon': ['.sr', 56],
+      'Sunset icon': ['.ss', 28],
+    }
+    var b32 = "0123456789ABCDEFGHJKMNPQRSTVWXYZ";
+  </script>
+</head>
+
+<body>
+  <div id="nav">
+  </div>
+  <div id="show">
+  <div id="col"></div>
+  <div id="main" class="bk">
+    <div class="nr">0735 <span class="sr">u</span></div>
+    <div class="nr info">
+      <span class="btt">p</span><span class="dnd">s</span><span class="ph">b</span><span class="alr">a</span><span class="msg">m</span><span class="loc">g</span>23
+    </div>
+    <div>
+    <div class="hr">
+      <div class="d">12</div>
+      <span class="a subord">198<br>64</span>
+      <span class="b subord">54</span>
+    </div>
+    <div class="step">
+      <div class="d">34</div>
+      <span id="stepmax" class="a subord">10000<br>&nbsp;</span>
+      <span id="stepval" class="b subord">9874</span>
+    </div>
+    <div class="c">
+      <span class="nr">34</span>
+    </div>
+    </div>
+    <div class="a"></div>
+    <div class="nr">1758 <span class="ss">d</span></div>
+  </div>
+  <div id="result"></div>
+  <script>
+    var selected = {
+      element: null,
+      colour: null,
+      class: null
+    }
+    var res = [];
+    var a = 0;
+    var b = 0;
+    var c = 0;
+    var tgt = document.getElementById('col');
+    var e;
+    function updateResult() {
+      document.getElementById('result').innerHTML = res.join("");
+    }
+
+    function colourClicked(e) {
+      selectColour(e.target);
+    }
+    function selectColour(e) {
+      if ( selected.colour ){
+        selected.colour.innerHTML = "";
+      }
+      e.innerHTML = "✓";
+      var tgt = e.parentNode;
+      var cIdx = 0;
+      while ( tgt.children[cIdx] !== e) cIdx++;
+      elements[selected.element.innerHTML][1] = cIdx;
+      tgt = document.getElementById('nav');
+      var eIdx = 0;
+      while ( tgt.children[eIdx] !== selected.element) eIdx++;
+      res[eIdx] = (cIdx/32|0 ? "a": "") + b32[cIdx % 32];
+      updateResult();
+
+      selected.colour = e;
+      if (selected.class.style.color)
+      selected.class.style.color = e.style.backgroundColor;
+      if (selected.class.style.backgroundColor)
+      selected.class.style.backgroundColor = e.style.backgroundColor;
+
+    }
+    function preSelect(elementName){
+      var colourIndex = elements[elementName][1];
+      var tgt = document.getElementById('col');
+      selected.class = elements[elementName][0];
+      selectColour(tgt.children[colourIndex]);
+    }
+    function elementClicked(e) {
+      if ( selected.element) {
+        selected.element.classList.remove("sel");
+      }
+      e.target.classList.add("sel");
+      selected.element = e.target;
+      preSelect(selected.element.innerHTML);
+    }
+    for (a=0; a <= 0xf; a += 5) {
+      for (b = 0; b <= 0x5; b += 5) {
+        for (c = 0; c <= 0xf; c += 5) {
+          e = document.createElement('button');
+          e.setAttribute('style',
+            "background-color: #" + a.toString(16) + b.toString(16) + c.toString(16) + (
+              a/2+b+c/2<15 ? ";color: white" : ""
+            ));
+          tgt.appendChild(e);
+          e.addEventListener("click", colourClicked);
+        }
+      }
+    }
+    for (a=0; a <= 0xf; a += 5) {
+      for (b = 10; b <= 0xf; b += 5) {
+        for (c = 0; c <= 0xf; c += 5) {
+          e = document.createElement('button');
+          e.setAttribute('style',
+            "background-color: #" + a.toString(16) + b.toString(16) + c.toString(16) + (
+              a/2+b+c/2<15 ? ";color: white" : ""
+            ));
+          e.addEventListener("click", colourClicked);
+          tgt.appendChild(e);
+        }
+      }
+    }
+
+    tgt = document.getElementById('nav');
+    var rules = document.styleSheets[0].rules;
+    var ii = 0;
+    for(var el in elements) {
+      e = document.createElement('button');
+      e.innerHTML = el;
+      console.log(ii, el);
+      ii++;
+      e.addEventListener("click", elementClicked);
+      tgt.appendChild(e);
+      for(var i=0; i< rules.length; i++){
+        if (rules[i].selectorText == elements[el][0]) {
+          elements[el][0] = rules[i];
+          break;
+        }
+      }
+      elementClicked({target: e});
+    }
+    elementClicked({target: tgt.children[0]});
+</script>
+  </div>
+</body>
+
+</html>
