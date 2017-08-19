@@ -1,6 +1,6 @@
 common lineHeight=35 base=35 pages=1
 page id=0 file="hooky.png"
-chars count=15
+chars count=13
 char id=48 x=0 y=147 width=25 height=35 xoffset=0 yoffset=0 xadvance=25 page=0 chnl=1
 char id=49 x=25 y=147 width=25 height=35 xoffset=0 yoffset=0 xadvance=25 page=0 chnl=1
 char id=50 x=50 y=147 width=25 height=35 xoffset=0 yoffset=0 xadvance=25 page=0 chnl=1

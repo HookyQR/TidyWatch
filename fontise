@@ -42,7 +42,7 @@ setup.forEach(setting => {
   const out = fs.createWriteStream(fName);
   out.write(`common lineHeight=${setting.height} base=${setting.height} pages=1
 page id=0 file="hooky.png"
-chars count=${setting.chars.length+2}
+chars count=${setting.chars.length}
 `, () => {
     let osX = 0;
     const lines = setting.chars.split('').map(c => {
