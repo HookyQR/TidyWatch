@@ -1,8 +1,7 @@
 class NullBox {
   var x = 0;
   var y = 0;
-  var dim = [0,0];
-
+  var h = 0;
   function initialize() {}
 
   function setFG(color) { }
@@ -10,10 +9,11 @@ class NullBox {
   function setAlign(a) { }
   function setLeft(l) { x = l; }
   function setTop(t) { y = t; }
-  function width() { return dim[0]; }
-  function height() { return dim[1]; }
-  function bottom() { return y + height(); }
-  function right() { return x + width(); }
+  function setHeight(newH) { h = newH; }
+  function width() { return 0; }
+  function height() { return h; }
+  function bottom() { return y + h; }
+  function right() { return x; }
   function left() { return x; }
   function top() { return y; }
 
@@ -22,7 +22,7 @@ class NullBox {
     return self;
   }
   function center(other) {
-    x = other.x + (other.width() - width())/2;
+    x = other.x + other.width()/2;
     return self;
   }
   function below(other, padding) {
@@ -34,7 +34,7 @@ class NullBox {
     return self;
   }
   function leftOf(other, padding) {
-    x = other.x - width() - padding;
+    x = other.x - padding;
     return self;
   }
 

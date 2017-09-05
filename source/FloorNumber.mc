@@ -47,7 +47,7 @@ class FloorNumber extends DisplayNumber {
 
     var r = t - bottomV();
     r = r <= 0 ? 1 : r;
-    r = (height() - dim[1]) * (r - a + bottomV()) / r;
+    r = (height() - DisplayNumber.height()) * (r - a + bottomV()) / r;
     if (r <= 0 && a < t){ r = 1; }
     return r < 0 ? 0 : r;
   }
@@ -65,13 +65,13 @@ class FloorNumber extends DisplayNumber {
     var p = pos();
     dc.setColor(fg, bg);
     if (p < prevPos) {
-      dc.setClip(x,  y + 1 + p + dim[1], width(), prevPos - p);
-      dc.fillRectangle(x, y + 1 + p + dim[1], width(), prevPos - p);
+      dc.setClip(x,  y + 1 + p + DisplayNumber.height(), width(), prevPos - p);
+      dc.fillRectangle(x, y + 1 + p + DisplayNumber.height(), width(), prevPos - p);
     } else if ( prevPos < p ) {
       dc.setClip(x,  y + 1 + prevPos, width(), prevPos - p);
       dc.fillRectangle(x, y + 1 + prevPos, width(), prevPos - p);
     }
-    dc.setClip(x, y + p + 1, width(), dim[1]);
+    dc.setClip(x, y + p + 1, width(), DisplayNumber.height());
     prevPos = p;
     dc.drawText(x, y + p, font, format(value()), Gfx.TEXT_JUSTIFY_LEFT);
   }

@@ -4,7 +4,7 @@ using Toybox.Application as App;
 
 class DisplayNumber {
   var font;
-  var dim;
+  var w_h;
   var x = 0;
   var y = 0;
   var fg, bg;
@@ -17,7 +17,8 @@ class DisplayNumber {
   function initialize(dc, options) {
     fg = App.getApp().getProperty("bgColour");
     font = options[:font];
-    dim = dc.getTextDimensions("0", font);
+    var dim = dc.getTextDimensions("0", font); // our height is never more than 255
+    w_h = (dim[0] << 8) + dim[1];
     len = options[:length];
     fmt = Lang.format("%$1$$2$i", [options[:zero] ? "0" : "", len]);
     cb = options[:callback];
@@ -47,8 +48,8 @@ class DisplayNumber {
   function setAlign(a) { align = a; }
   function setLeft(l) { x = l; }
   function setTop(t) { y = t; }
-  function width() { return dim[0] * len; }
-  function height() { return dim[1]; }
+  function width() { return (w_h >> 8) * len; }
+  function height() { return w_h & 0xff; }
   function bottom() { return y + height(); }
   function right() { return x + width(); }
   function left() { return x; }

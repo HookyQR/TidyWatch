@@ -3,7 +3,7 @@ using Toybox.Application as App;
 class Row {
   var elem;
   var fg = App.getApp().getProperty("bgColour");
-  var dim = [0,0];
+  var w_h;
   var x, y;
   var show;
   function initialize(dc, elements, options) {
@@ -16,7 +16,7 @@ class Row {
       h = elem[i].height() > h ? elem[i].height() : h;
       elem[i].changed(); // force create
     }
-    dim = [w, h];
+    w_h = (w << 8) + h;
   }
 
   function setFG(color) { fg = color; }
@@ -24,7 +24,7 @@ class Row {
   function setLeft(l) { x = l; }
   function setTop(t) {
     y = t;
-    for(var i=0; i< elem.size(); i++) { elem[i].setTop(y + (dim[1] - elem[i].height())/2); }
+    for(var i=0; i< elem.size(); i++) { elem[i].setTop(y + (height() - elem[i].height())/2); }
   }
   function above(other, padding) {
     setTop(other.top() - height() - padding);
@@ -38,8 +38,8 @@ class Row {
     setLeft((other - width())/2);
     return self;
   }
-  function height() { return dim[1]; }
-  function width() { return dim[0]; }
+  function height() { return w_h & 0xff; }
+  function width() { return w_h >> 8; }
   function bottom() { return y + height(); }
   function right() { return x + width(); }
   function left() { return x; }
@@ -60,7 +60,7 @@ class Row {
     if ( dc has :setClip) { dc.setClip(left(), top()+1, width(), height()); }
     dc.fillRectangle(left(), top()+1, width(), height());
 
-    var p = (dim[0] - w)/2;
+    var p = ((w_h>>8) - w)/2;
     for(i=0; i < elem.size(); i++) {
       elem[i].setLeft(x+p);
       elem[i].draw(dc);

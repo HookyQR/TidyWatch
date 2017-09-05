@@ -8,9 +8,23 @@ using Toybox.Application as App;
 
 class TidyData {
   var hr = [null, null, null];
-  var settings, stats, clockTime, info, zones, loc, date;
+  var clockTime, zones, loc, date;
   var persistedLocation = [null, null];
 
+  var _floorsClimbed = null;
+  var _floorsClimbedGoal = null;
+
+
+  var notificationCount;
+  var alarmOn;
+  var dndOn;
+  var phoneConnected;
+  var _24hr;
+
+  var bat;
+
+  var steps = null;
+  var stepGoal = null;
   var zoneCol = [
     Gfx.COLOR_DK_GRAY,
     Gfx.COLOR_LT_GRAY,
@@ -22,13 +36,12 @@ class TidyData {
 
   var sunData = new SunData();
 
-  function initialize() {
-  }
+  function initialize() {}
 
   function updateSettings() {
     persistedLocation = App.getApp().getProperty("location");
 
-    if ( persistedLocation == null) {
+    if (persistedLocation == null) {
       persistedLocation = [null, null];
     }
     zoneCol = [
@@ -48,6 +61,7 @@ class TidyData {
       return null;
     }
   }
+
   function hrCount() {
     try {
       return ActMon.getHeartRateHistory(180, true); // 81 seconds between updates ... maybe?
@@ -55,18 +69,34 @@ class TidyData {
       return null;
     }
   }
+
   function refresh(heavyLift) {
-    settings = Sys.getDeviceSettings();
-    stats = Sys.getSystemStats();
-    info = ActMon.getInfo();
+    var settings = Sys.getDeviceSettings();
+    var stats = Sys.getSystemStats();
+    var info = ActMon.getInfo();
     var ai = Act.getActivityInfo();
     var ittr = null;
     var first;
 
+    notificationCount = settings.notificationCount;
+
+    _floorsClimbed = (info has :floorsClimbed) ? info.floorsClimbed : 1;
+    _floorsClimbedGoal = (info has :floorsClimbedGoal) ? info.floorsClimbedGoal : 1;
+
+    steps = info.steps;
+    stepGoal = info.stepGoal;
+
+    notificationCount = settings.notificationCount;
+    alarmOn = settings.alarmCount != null && settings.alarmCount > 0;
+    dndOn = (settings has :doNotDisturb) ? settings.doNotDisturb : false;
+    phoneConnected = settings.phoneConnected;
+    _24hr = settings.is24Hour;
+
+    bat = stats.battery;
     loc = ai ? ai.currentLocation : null;
 
-    if ( loc != null &&
-        loc.toRadians()[0] != null &&
+    if (loc != null &&
+      loc.toRadians()[0] != null &&
       (loc.toRadians()[0] != persistedLocation[0] || loc.toRadians()[1] != persistedLocation[1])) {
       persistedLocation = loc.toRadians();
       App.getApp().setProperty("location", persistedLocation);
@@ -77,16 +107,16 @@ class TidyData {
     date = Time.Gregorian.info(Time.now(), Time.FORMAT_SHORT).day;
 
     // get out if we don't have time to do big stuff
-    if(!heavyLift) { return; }
+    if (!heavyLift) { return; }
 
     sunData.calculate(persistedLocation, App.getApp().getProperty("sunupTime"), App.getApp().getProperty("sundownTime"));
 
-    if(ActMon has :getHeartRateHistory) {
+    if (ActMon has :getHeartRateHistory) {
       ittr = hrDuration();
-      if (ittr == null ) {
+      if (ittr == null) {
         ittr = hrCount();
       }
-      if ( ittr == null ) { return; } // bums
+      if (ittr == null) { return; } // bums
 
       first = ittr.next();
       var min = ittr.getMin();
@@ -104,77 +134,95 @@ class TidyData {
   }
 
   function zoneColor(nr) {
-    if ( nr == null)    { return zoneCol[0]; }
-    if( nr <= zones[0]) { return zoneCol[0]; }
-    if( nr <= zones[1]) { return zoneCol[1]; }
-    if( nr <= zones[2]) { return zoneCol[2]; }
-    if( nr <= zones[3]) { return zoneCol[3]; }
-    if( nr <= zones[4]) { return zoneCol[4]; }
+    if (nr == null) { return zoneCol[0]; }
+    if (nr <= zones[0]) { return zoneCol[0]; }
+    if (nr <= zones[1]) { return zoneCol[1]; }
+    if (nr <= zones[2]) { return zoneCol[2]; }
+    if (nr <= zones[3]) { return zoneCol[3]; }
+    if (nr <= zones[4]) { return zoneCol[4]; }
     return zoneCol[5];
   }
-  function floorsClimbed() { return info == null ? null :((info has :floorsClimbed) ? info.floorsClimbed : 1); }
-  function floorsClimbedGoal() { return info == null ? null : ((info has :floorsClimbedGoal) ? info.floorsClimbedGoal : 1); }
 
-/* Mock values * /
-  function messages() { return 3; }
-  function phone() { return true; }
-  function alarm() { return settings.alarmCount != null && settings.alarmCount > 0; }
-  function dnd() { return (settings has :doNotDisturb); }
-  function battery() { return 47.0; }
-  function gps() { return loc; }
+  function floorsClimbed() { return _floorsClimbed; }
 
-  function mday() { return 30; }
+  function floorsClimbedGoal() { return _floorsClimbedGoal; }
 
-  function riseHour() { return 6; }
-  function riseMin() { return 7; }
-  function setHour() { return hourFmt(16); }
-  function setMin() { return 52; }
-  function currentSteps() { return info == null ? null : 2543;}
-  function targetSteps() { return info == null ? null : 5782;}
-  function hrMin() { return hr[0] ? 57 : null; }
-  function hrMax() { return hr[1] ? 171 : null; }
-  function hrActual() { return hr[2] ? 136 : null; }
-  function minute() {return 34;}
-  function second() { return 56;}
-  function hour() { return hourFmt(21); }
+  /* Mock values * /
+    function messages() { return 3; }
+    function phone() { return true; }
+    function alarm() { return settings.alarmCount != null && settings.alarmCount > 0; }
+    function dnd() { return (settings has :doNotDisturb); }
+    function battery() { return 47.0; }
+    function gps() { return loc; }
 
-/*/
-  function messages() { return settings.notificationCount; }
-  function phone() { return settings.phoneConnected; }
-  function alarm() { return settings.alarmCount != null && settings.alarmCount > 0; }
-  function dnd() { return (settings has :doNotDisturb) ? settings.doNotDisturb : false; }
-  function battery() { return stats.battery; }
-  function gps() { return loc; }
+    function mday() { return 30; }
+
+    function riseHour() { return 6; }
+    function riseMin() { return 7; }
+    function setHour() { return hourFmt(16); }
+    function setMin() { return 52; }
+    function currentSteps() { return info == null ? null : 2543;}
+    function targetSteps() { return info == null ? null : 5782;}
+    function hrMin() { return hr[0] ? 57 : null; }
+    function hrMax() { return hr[1] ? 171 : null; }
+    function hrActual() { return hr[2] ? 136 : null; }
+    function minute() {return 34;}
+    function second() { return 56;}
+    function hour() { return hourFmt(21); }
+
+  /*/
+  function messages() { return notificationCount; }
+
+  function phone() { return phoneConnected; }
+
+  function alarm() { return alarmOn; }
+
+  function dnd() { return dndOn; }
+
+  function battery() { return bat; }
+
+  function gps() { return loc != null; }
 
   function mday() { return date; }
 
   function riseHour() { return hourFmt(sunData.sunRiseTime[0]); }
+
   function riseMin() { return sunData.sunRiseTime[1]; }
+
   function riseTomorrow() { return sunData.sunRiseTime[2] > date; }
+
   function setHour() { return hourFmt(sunData.sunSetTime[0]); }
+
   function setMin() { return sunData.sunSetTime[1]; }
+
   function setTomorrow() { return sunData.sunSetTime[2] > date; }
 
-  function currentSteps() { return info == null ? null : info.stepGoal == 0 ? null : info.steps; }
-  function targetSteps() { return info == null ? null : info.stepGoal == 0 ? null : info.stepGoal; }
+  function currentSteps() { return stepGoal == null ? null : steps; }
+
+  function targetSteps() { return stepGoal; }
 
   function hrMin() { return hr[0]; }
+
   function hrMax() { return hr[1]; }
+
   function hrActual() { return hr[2]; }
 
-  function minute() {return clockTime.min; }
+  function minute() { return clockTime.min; }
+
   function second() { return clockTime.sec; }
+
   function hour() { return hourFmt(clockTime.hour); }
   /**/
 
-  function is24Hour() { return settings.is24Hour; }
-  function is12Hour() { return !settings.is24Hour; }
+  function is24Hour() { return _24hr; }
 
-  function hourFmt( h ) {
-    if ( h == null) { return null; }
-    if ( !settings.is24Hour) {
-      if( h > 12 ){ h -= 12; }
-      if ( h == 0){ h = 12; }
+  function is12Hour() { return !_24hr; }
+
+  function hourFmt(h) {
+    if (h == null) { return null; }
+    if (!_24hr) {
+      if (h > 12) { h -= 12; }
+      if (h == 0) { h = 12; }
     }
     return h;
   }

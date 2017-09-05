@@ -21,11 +21,11 @@ class RangedNumber extends DisplayNumber {
     }
     else {
       minBox = new NullBox();
-      if(options[:max] != null) { minBox.dim[1] = maxBox.height();}
-      else { minBox.dim[1] = actualBox.height(); }
+      if(options[:max] != null) { minBox.setHeight(maxBox.height());}
+      else { minBox.setHeight(actualBox.height()); }
     }
     if( options[:max] == null && options[:min] != null ) {
-      maxBox.dim[1] = minBox.height();
+      maxBox.setHeight(minBox.height());
     }
   }
 
