@@ -19,6 +19,7 @@
             <iq:product id="vivoactive"/>
             <iq:product id="fr935"/>
             <iq:product id="approachs60"/>
+            <iq:product id="vivoactive3"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="UserProfile" />
