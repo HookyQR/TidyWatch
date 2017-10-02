@@ -1,6 +1,6 @@
 <settings>
   <setting propertyKey="@Properties.colourString" title="@Strings.TColourString" prompt="@Strings.TColourURL">
-    <settingConfig type="alphaNumeric" />
+    <settingConfig type="alphaNumeric" required="false" />
   </setting>
   <setting propertyKey="@Properties.bgColour" title="@Strings.TBgColour">
     <settingConfig type="list">

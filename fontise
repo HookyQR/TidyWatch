@@ -7,6 +7,7 @@ const path = require('path');
 const cp = require('child_process');
 
 const setup = [
+  { height: 63, blockWidth: 9,  chars: "0123456789:! " },
   { height: 56, blockWidth: 8,  chars: "0123456789:! " },
   { height: 49, blockWidth: 7,  chars: "0123456789:! " },
   { height: 42, blockWidth: 6,  chars: "0123456789:! " },
@@ -41,7 +42,7 @@ setup.forEach(setting => {
   const fName = path.join.apply(path, root.concat(`hooky_${setting.blockWidth}${setting.inverted? 'i':''}.fnt`));
   const out = fs.createWriteStream(fName);
   out.write(`common lineHeight=${setting.height} base=${setting.height} pages=1
-page id=0 file="hooky.png"
+page id=0 file="hooky9.png"
 chars count=${setting.chars.length}
 `, () => {
     let osX = 0;

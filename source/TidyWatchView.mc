@@ -56,8 +56,8 @@ class TidyWatchView extends Ui.WatchFace {
     ];
     var i = 0;
     var j = 0;
-    for(i=0;i<props.size() && j < bits.size();i++, j++){
-      var os = 0;
+    var os = 0;
+    for(i=0;i<props.size() && j < bits.size();i++, j++, os=0){
       if ( bits[j] == 'a') {
         j++;
         os = 32;
